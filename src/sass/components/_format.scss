@@ -13,13 +13,12 @@
 
 // import
 
-$baseFontCN: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-$baseFontSize: 20px;
-
+$base-font-cn: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$base-font-size: 20px;
 
 html {
-  font-family: $baseFontCN; /* 1 */
-  font-size: $baseFontSize;
+  font-family: $base-font-cn; /* 1 */
+  font-size: $base-font-size;
   line-height: 1.15; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
@@ -276,7 +275,7 @@ svg:not(:root) {
  */
 
 button, input, optgroup, select, textarea {
-  font-family: $baseFontCN; /* 1 */
+  font-family: $base-font-cn; /* 1 */
   font-size: .7rem; /* 1 */
   line-height: 1.5; /* 1 */
   margin: 0; /* 2 */

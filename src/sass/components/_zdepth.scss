@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*!
+  * Author: うつせみ
+  * LastUpdate: 2017.Aug.25th
+*/
+
+/* import mixin ///Order: down(low) ---> up(height)
+   ========================================================================== */
+@import "../core/mixins";
+//$xOffset:0,$yOffset:0,$blur:0,$spread:0,$color
+.elevation-1 {
+  @include box-shadow(0,1px,3px,0px,rgba(0,0,0,.2));
+}
+.elevation-2 {
+  @include box-shadow(0,1px,5px,0px,rgba(0,0,0,.2));
+}
+.elevation-3 {
+  @include box-shadow(0,1px,8px,0px,rgba(0,0,0,.2));
+}
+.elevation-4 {
+  @include box-shadow(0,1px,10px,0px,rgba(0,0,0,.2));
+}
+
+.elevation-6 {
+  @include box-shadow(0,3px,5px,0px,rgba(0,0,0,.2));
+}
+.elevation-8 {
+  @include box-shadow(0,4px,15px,0px,rgba(0,0,0,.2));
+}
+.elevation-9 {
+  @include box-shadow(0,5px,6px,0px,rgba(0,0,0,.2));
+}
+
+.elevation-12 {
+  @include box-shadow(0,7px,8px,0px,rgba(0,0,0,.2));
+}
+.elevation-16 {
+  @include box-shadow(0,8px,10px,0px,rgba(0,0,0,.2));
+}
+.elevation-24 {
+  @include box-shadow(0,11px,15px,0px,rgba(0,0,0,.2));
+}

@@ -1,8 +1,8 @@
 @import "../core/mixins";
-@import "../core/breakpoints";
 
-.foo {
-  @include media-respond ('xl') {
-    color: red;
-  }
+
+.shadow-test {
+  @include element-size(150px,150px);
+  background: #232a4f;
+  margin-bottom: 40px;
 }
