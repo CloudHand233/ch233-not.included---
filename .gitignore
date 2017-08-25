@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+*.iml
+_psd/
+_ued/
+_doc/
+releases-zip/
+.sass-cache/
+*.zip
+node_modules/
