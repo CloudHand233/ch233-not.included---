@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*!
+  * Author: うつせみ
+  * LastUpdate: 2017.Aug.25th
+*/
+
+/* box models
+   ========================================================================== */
+@mixin element-shape ($width:auto,$height:null,$position:relative,$display:block) { //默认相对定位并且块状化
+  width: $width;
+  height: $height;
+  position: $position;
+  display: $display;
+}
