@@ -163,7 +163,7 @@ template { display: none; }
 .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 1.2rem; /* Preferred icon size */ display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr; /* Support for all WebKit browsers. */ -webkit-font-smoothing: antialiased; /* Support for Safari and Chrome. */ text-rendering: optimizeLegibility; /* Support for Firefox. */ -moz-osx-font-smoothing: grayscale; /* Support for IE. */ font-feature-settings: 'liga'; }
 
 /*! Author: うつせみ LastUpdate: 2017.Aug.25th */
-/* import mixin ///Order: down(low) ---> up(height) ========================================================================== */
+/* import mixin ///$xOffset:0,$yOffset:0,$blur:0,$spread:0,$color ========================================================================== */
 /*! Author: うつせみ LastUpdate: 2017.Aug.25th */
 /* element set ========================================================================== */
 /* css3 & hack style ========================================================================== */
@@ -368,25 +368,51 @@ template { display: none; }
 
 .character-100 { width: 100em !important; position: relative; display: block; }
 
-.elevation-1 { -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2); }
+/* zdepth shadow ///Order: down(low) ---> up(height) ========================================================================== */
+.elevation-1 { -moz-box-shadow: 0 0.05rem 0.15rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.05rem 0.15rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.05rem 0.15rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-2 { -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2); }
+.elevation-2 { -moz-box-shadow: 0 0.05rem 0.25rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.05rem 0.25rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.05rem 0.25rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-3 { -moz-box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.2); }
+.elevation-3 { -moz-box-shadow: 0 0.05rem 0.4rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.05rem 0.4rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.05rem 0.4rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-4 { -moz-box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2); }
+.elevation-4 { -moz-box-shadow: 0 0.05rem 0.5rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.05rem 0.5rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.05rem 0.5rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-6 { -moz-box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2); }
+.elevation-6 { -moz-box-shadow: 0 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-8 { -moz-box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.2); }
+.elevation-8 { -moz-box-shadow: 0 0.2rem 0.55rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.2rem 0.55rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.2rem 0.55rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-9 { -moz-box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.2); }
+.elevation-9 { -moz-box-shadow: 0 0.25rem 0.3rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.25rem 0.3rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.25rem 0.3rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-12 { -moz-box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2); }
+.elevation-12 { -moz-box-shadow: 0 0.35rem 0.4rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.35rem 0.4rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.35rem 0.4rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-16 { -moz-box-shadow: 0 8px 10px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 8px 10px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 8px 10px 0px rgba(0, 0, 0, 0.2); }
+.elevation-16 { -moz-box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2); }
 
-.elevation-24 { -moz-box-shadow: 0 11px 15px 0px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 11px 15px 0px rgba(0, 0, 0, 0.2); box-shadow: 0 11px 15px 0px rgba(0, 0, 0, 0.2); }
+.elevation-24 { -moz-box-shadow: 0 0.55rem 0.75rem 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0.55rem 0.75rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.55rem 0.75rem 0 rgba(0, 0, 0, 0.2); }
+
+/* z-index ///Order: down(low) ---> up(height) ========================================================================== */
+.zindex-fallback { z-index: 9; }
+
+.zindex-1 { z-index: 1000; }
+
+.zindex-2 { z-index: 1020; }
+
+.zindex-3 { z-index: 1040; }
+
+.zindex-4 { z-index: 1060; }
+
+.zindex-6 { z-index: 1080; }
+
+.zindex-8 { z-index: 1100; }
+
+.zindex-9 { z-index: 1120; }
+
+.zindex-12 { z-index: 1140; }
+
+.zindex-16 { z-index: 1160; }
+
+.zindex-24 { z-index: 1180; }
+
+.zindex-alert { z-index: 9999; }
 
 /* import theme ========================================================================== */
 /*! Author: うつせみ LastUpdate: 2017.Aug.25th */
