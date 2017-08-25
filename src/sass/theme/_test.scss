@@ -1,12 +1,5 @@
 @import "../core/mixins";
-@import "../components/breakpoints";
-
-
-
-
-
-
-
+@import "../core/breakpoints";
 
 .foo {
   @include media-respond ('xl') {
