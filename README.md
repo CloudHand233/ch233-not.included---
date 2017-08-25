@@ -2,9 +2,30 @@
 ---
 📅 2017/8/25
 
-ch233 第三版，起名 smile ，与 233 不言而喻。乐观的看待生活和这个糟糕的世界，亲近设计，亲近客户的观点始终需要贯彻在这个版本中。
+ch233 第三版，起名 smile 。我相信，能够让我们走的更远的，是我们能够微笑面对自己的不完美，以及别人的不完美。
+---
+## @media 断点设置：
+```scss
+$breakpoints: (
+  // Small devices (landscape phones, 576px and up)
+  'sm': (min-width: 576px, max-width: 767px),
+  // Medium devices (tablets, 768px and up)
+  'md': (min-width: 768px, max-width: 991px),
+  // Large devices (desktops, 992px and up)
+  'lg': (min-width: 992px, max-width: 1199px),
+  // Extra large devices (large desktops, 1200px and up)
+  'xl': (min-width: 1200px),
+);
+```
 
-创造是开心的，设计也应该是开心的，最开心的，是我们敢于正视自己的不成熟。
+sass 中如何使用：
+```scss
+.className {
+  @include media-respond($breakpoints) {
+    ...
+  }
+}
+```
 ---
 ## html 的基础模板
 ```html
@@ -29,6 +50,12 @@ ch233 第三版，起名 smile ，与 233 不言而喻。乐观的看待生活�
 ## .scss 文件中的约定
 > css 的加载通过 output 下的 ch233.mini.scss 控制，简而言之，ch233.mini.scss 只控制加载哪些样式表，而不直接写入样式
 
+**sass 文件夹下的 components、core 和 theme 如何区分？**
+* components 是组件，即 components 下的文件都是通过 ch233.mini.scss 调用来获得支持，可按需调用；
+* core 是核心，即 core 下的文件并不是给 ch233.mini.scss 来调用的，而是在使用 scss 的过程中调用的；
+* theme 是对当前项目或者当前皮肤写的样式集合，也是由 ch233.mini.scss 调用来使用；
+
+**.scss 文件中注释的写法：**
 * 注释的写法
 ```css
 /*!
@@ -39,13 +66,22 @@ ch233 第三版，起名 smile ，与 233 不言而喻。乐观的看待生活�
 */
 ```
 * 静默注释`//`用于阐述各个部件和版块的使用、说明、释义
+* `@import` 导入文件的注释：
+```
+/* import components
+========================================================================== */
+@import "../components/format";
+```
 ---
 ## ICON
-使用 Google 的 Materail ICONS。files：
+使用 Google 的 Materail ICONS。须确保将以下字体文件拷贝到 dist/fonts 下：
+
 * fonts/MaterialIcons-Regular.ttf
 * fonts/MaterialIcons-Regular.woff
 * fonts/MaterialIcons-Regular.woff2
-* scss/components/_material-icons.scss
+
+需在 ch233.mini.scss 中加载 scss/components/_material-icons.scss
+`@import "../components/material-icons";`
 ---
 ## package.json
 > 简化了之前的 package.json 版本，如无必要勿增实体
@@ -117,6 +153,8 @@ release-zip: 发行 dist 版本，版本命名中带有 package.json 的版本�
 			|—— _extend.scss （备用样式集合）
 			|—— _layout.scss （布局）
 		|—— components （组件集合，按需加载）
+			|—— _format.scss （初始化格式化样式表，默认 html 的 font-size: 20px）
+			|—— _material-icons.scss （material icons 样式表）
 			|—— _table.scss
 			|—— _grid.scss
 			|—— _button.scss
