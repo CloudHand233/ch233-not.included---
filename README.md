@@ -1,8 +1,41 @@
 # ch233-smile-3.0
 ---
+📅 2017/8/28
+
+内滚动框架可能还是避不开，毕竟软件类型布局还是占到了 UI 界面的一大部分。
+参考文章：[浅议内滚动布局 - 前端技术 - 腾讯ISUX](https://isux.tencent.com/inner-scroll-layout.html)
+---
 📅 2017/8/25
 
 ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，是我们能够微笑面对自己的不完美，以及别人的不完美。
+---
+## Frame Set 管理系统布局
+基础布局如下：
+```html
+<div class="frame-page">
+    <div class="frame-header">This is Header</div>
+    <div class="frame-side">Side Bar</div>
+    <div class="frame-container">Here are Container</div>
+    <div class="frame-footer"><!-- normally no use --></div>
+</div>
+```
+
+> 其中page扮演传统页面<body>的角色。这是一个预留设计，防止为了满足某些功能或交互体验需要，一个页面同时出现多个类似结构页面的情况。
+---
+## Gradients 渐变 mixin
+> 该部分参考了 bootstrap 的渐变 mixin
+> 
+考虑到 css 渐变的可用性问题，这部分并没有放到 mixins 里面，而是独立了一个文件出来，写 theme 的时候也可以考虑针对渐变单独写一个文件。渐变的 mixins 如下：
+
+```scss
+@include gradient-x(颜色1, 颜色2, 开始点, 结束点);//2个色，从左到右
+@include gradient-x-three-colors(颜色1, 中间色, 中间色位置, 颜色3);//3个色，从左到右
+@include gradient-y(颜色1, 颜色2, 开始点, 结束点);//2个色，从上到下
+@include gradient-y-three-colors(颜色1, 中间色, 中间色位置, 颜色3);//3个色，从上到下
+@include gradient-directional(颜色1, 颜色2, 半径值);//2个色，经向渐变
+@include gradient-radial(颜色1-内, 颜色2-外);//2个色，经向渐变
+@include gradient-striped(颜色1, 角度值);//1个色，经向渐变，alpha 创建
+```
 ---
 ## @media 断点设置：
 ```scss
@@ -34,10 +67,44 @@ sass 中如何使用：
 <head>
     <meta charset="UTF-8">
     <title>ch233-smile</title>
-
+    <!-- main style sheet *necessary -->
     <link rel="stylesheet" href="css/ch233.mini.css">
 </head>
 <body>
+
+<!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 -->
+<div class="page">
+
+    <!-- header 部分，包含导航和 logo -->
+    <div class="header header-ufo">
+        <div class="header-nav">
+            <!--<div class="nav-logo"><img src="img/logo_650x270_white_shadow.png"></div>-->
+            <ul class="nav-list nav-list-right">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">快速起步</a></li>
+                <li><a href="#">全局 CSS 样式</a></li>
+                <li><a href="#">JavaScript 脚本</a></li>
+                <li><a href="#">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- cover 部分，滚动图或静态图 -->
+    <div class="cover">
+		cover img
+    </div>
+
+    <!-- container 是主体内容区域 -->
+    <div class="container">
+        <div class="content-block">container</div>
+    </div>
+
+    <!-- footer 是底部，链接 or 版权区域 -->
+    <div class="footer">
+        <div class="content-block">footer</div>
+    </div>
+
+</div>
 
 <!--Elements UED ch233.js-->
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -46,6 +113,8 @@ sass 中如何使用：
 </body>
 </html>
 ```
+
+`<div class="content-block">` 是用来控制页面宽度的（需要后期加入@media 断点控制）
 ---
 ## .scss 文件中的约定
 > css 的加载通过 output 下的 ch233.mini.scss 控制，简而言之，ch233.mini.scss 只控制加载哪些样式表，而不直接写入样式
@@ -82,6 +151,8 @@ sass 中如何使用：
 
 需在 ch233.mini.scss 中加载 scss/components/_material-icons.scss
 `@import "../components/material-icons";`
+
+完整的 ICON Library 列表：[Material icons - Material Design](https://material.io/icons/)
 ---
 ## package.json
 > 简化了之前的 package.json 版本，如无必要勿增实体
