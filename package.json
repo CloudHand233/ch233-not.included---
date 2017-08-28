@@ -4,7 +4,7 @@
   "description": "うつせみ ch233-smile",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --output-style compact --source-map true -o dist/css src/sass/output",
+    "scss": "node-sass --output-style nested --source-map true -o dist/css src/sass/output",
     "uglify": "uglifyjs src/js/output/* -m -c -o dist/js/ch233.min.js",
     "build:all": "npm run scss && npm run uglify",
     "watch:scss": "onchange \"src/sass/*/*.scss\" -- npm run scss",

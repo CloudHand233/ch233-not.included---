@@ -82,7 +82,7 @@
   background-size:$bg-size;
 }
 
-@mixin box-shadow($xOffset:0,$yOffset:0,$blur:0,$spread:0,$color:#000000){
+@mixin box-shadow($xOffset:0,$yOffset:0,$blur:0,$spread:0,$color:#000000) {
   //Firefox4.0- 投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色
   -moz-box-shadow:$xOffset $yOffset $blur $spread $color;
   //Safariand Google chrome10.0- 投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色
