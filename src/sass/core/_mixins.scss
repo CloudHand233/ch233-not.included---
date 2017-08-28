@@ -32,8 +32,16 @@
   max-height: $maxHeight;
 }
 
-@mixin element-position($position:absolute, $top:auto, $right:null, $bottom:null, $left:null) {//position定位
-  position: $position;
+@mixin element-psi-absolute($top:auto, $right:null, $bottom:null, $left:null) {//position:absolute定位
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin element-psi-fixed($top:auto, $right:null, $bottom:null, $left:null) {//position:fixed定位
+  position: fixed;
   top: $top;
   right: $right;
   bottom: $bottom;

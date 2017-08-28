@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*!
+  * Author: うつせみ
+  * LastUpdate: 2017.Aug.25th
+*/
+
+/* frame layout set
+   ========================================================================== */
+html,body {
+  overflow: hidden;
+}
+
+.frame-page {
+  @include element-psi-absolute(0,0,0,0);
+}
