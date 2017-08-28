@@ -3,13 +3,36 @@
   * Author: うつせみ
   * LastUpdate: 2017.Aug.25th
 */
-
+@import "../core/mixins";
+@import "../core/colors";
 /* frame layout set
    ========================================================================== */
+$header-height: 3.4rem;
+$side-width: 12rem;
+
 html,body {
+  @include element-size(100%,100%);
   overflow: hidden;
 }
 
 .frame-page {
   @include element-psi-absolute(0,0,0,0);
+  @include element-text(.6,rgba(#000,.87));
+  background: rgba($color-indigo500,.1);
+}
+
+.frame-page {
+  .frame-header {
+    @include element-size(null,$header-height);
+    @include element-psi-absolute(0,0,null,0);
+    background: $color-indigo500;
+  }
+  .frame-side {
+    @include element-size($side-width);
+    @include element-psi-absolute($header-height,0,0,0);
+    background: $color-indigo100;
+  }
+  .frame-container {
+    @include element-psi-absolute($header-height,0,0,$side-width);
+  }
 }
