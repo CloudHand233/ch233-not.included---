@@ -48,9 +48,10 @@
   left: $left;
 }
 
-@mixin element-horizontally($RowHeight:1.75rem) {//垂直居中
+@mixin element-horizontally($RowHeight:1.75rem,$align:left) {//垂直居中
   height: $RowHeight;
   line-height: $RowHeight;
+  text-align: $align;
 }
 
 @mixin element-border($allBorder:null,$top:null,$right:null,$bottom:null,$left:null) { //添加 border
@@ -59,6 +60,32 @@
   border-right: $right;
   border-bottom: $bottom;
   border-left: $left;
+}
+
+@mixin element-image-size($width:auto,$height:null,$position:relative,$display:block) {
+  width: $width;
+  height: $height;
+  position: $position;
+  display: $display;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* links
+   ========================================================================== */
+@mixin element-link($color:#000,$hover-decoration:none,$link-decoration:none,$hover-font-size:null,$link-font-size:null) {
+  a,a:link,a:visited {
+    color: rgba($color,.87);
+    text-decoration: $link-decoration;
+    font-size: $link-font-size;
+  }
+  a:hover {
+    color: rgba($color,1);
+    text-decoration: $hover-decoration;
+    font-size: $hover-font-size;
+  }
 }
 
 /* css3 & hack style
