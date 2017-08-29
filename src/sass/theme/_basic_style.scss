@@ -1,0 +1,53 @@
+@import "../core/mixins";
+@import "../core/colors";
+@import "../core/gradients";
+
+* {
+  @extend %clear-font;
+}
+
+.page {
+  background: rgba($color-primary500,.1);
+}
+
+.header {
+  @include element-size(auto,4rem);
+  background: rgba(0,0,0,.87);
+  .header-nav {
+    @include element-size(auto);
+    @include element-space(0,.4rem 1rem);
+    @include element-horizontally(3.2rem,left);
+    .nav-logo {
+      @include element-image-size(6rem);
+      @include inline-block();
+    }
+    .nav-list {
+      @include inline-block();
+      @include element-text(.8,rgba(255,255,255,.87));
+      li {
+        @include element-size();
+        @include inline-block();
+        @include element-space(0 .8rem);
+        @include element-link(#fff);
+      }
+    }
+    .nav-list-right {
+      float: right;
+    }
+  }
+}
+
+.container {
+  @include element-space(1rem auto,0 0 1rem 0);
+}
+
+.footer {
+  @include element-space(1rem auto 0 auto,1rem 0);
+  @include element-border(null,.05rem rgba($color-primary500,.27) solid);
+  background: #fff;
+}
+
+.content-block {
+  @include element-size(60rem);
+  @include element-space(0 auto);
+}

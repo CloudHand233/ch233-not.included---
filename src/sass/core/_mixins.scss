@@ -104,15 +104,13 @@
   border-radius: $radius;
 }
 
-@mixin box-sizing($box-model) {
-  $box-model:border-box!default;
+@mixin box-sizing($box-model:border-box) {
   box-sizing:$box-model;
   -moz-box-sizing:$box-model;
   -webkit-box-sizing:$box-model;
 }
 
-@mixin background-size($bg-size) {
-  $bg-size:cover!default;
+@mixin background-size($bg-size:cover) {
   -moz-background-size:$bg-size;
   background-size:$bg-size;
 }
