@@ -3842,7 +3842,7 @@ template {
    ========================================================================== */
 /* input
    ========================================================================== */
-.input-text, .input-icon {
+.input-text, .input-icon, .selector-icon {
   width: auto;
   position: relative;
   display: block;
@@ -3859,13 +3859,13 @@ template {
   -moz-border-radius: 0.3rem;
   border-radius: 0.3rem;
   border: 1px solid rgba(0, 0, 0, 0.26); }
-  .input-text a, .input-icon a, .input-text a:link, .input-icon a:link, .input-text a:visited, .input-icon a:visited {
+  .input-text a, .input-icon a, .selector-icon a, .input-text a:link, .input-icon a:link, .selector-icon a:link, .input-text a:visited, .input-icon a:visited, .selector-icon a:visited {
     color: rgba(255, 255, 255, 0.87);
     text-decoration: none; }
-  .input-text a:hover, .input-icon a:hover {
+  .input-text a:hover, .input-icon a:hover, .selector-icon a:hover {
     color: white;
     text-decoration: none; }
-  .input-text input, .input-icon input {
+  .input-text input, .input-icon input, .selector-icon input {
     width: 96%;
     position: relative;
     display: block;
@@ -3879,7 +3879,7 @@ template {
     line-height: 2.1rem;
     text-align: left;
     margin: 0;
-    padding: 0 2% 0;
+    padding: 0 2%;
     border: none;
     -webkit-border-radius: 0.4rem;
     -moz-border-radius: 0.4rem;
@@ -3919,6 +3919,90 @@ template {
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
   border-radius: 0.4rem; }
+
+/* select
+   ========================================================================== */
+.selector {
+  width: auto;
+  position: relative;
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  text-align: left;
+  margin: 0.8rem 0.6rem;
+  padding: 0 0.5rem;
+  display: block;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.26); }
+  .selector a, .selector a:link, .selector a:visited {
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none; }
+  .selector a:hover {
+    color: white;
+    text-decoration: none; }
+  .selector select {
+    width: 98%;
+    position: relative;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 2.1rem;
+    line-height: 2.1rem;
+    text-align: left;
+    margin: 0 1%;
+    padding: 0;
+    border: none;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+    outline: none;
+    background: none; }
+
+.selector-icon i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.5rem;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  display: block;
+  z-index: 99;
+  color: rgba(0, 0, 0, 0.54); }
+
+.selector-icon select {
+  width: 98%;
+  position: relative;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  text-align: left;
+  margin: 0;
+  padding: 0 2% 0 0;
+  border: none;
+  text-indent: 2.5em;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  outline: none;
+  background: none; }
 
 .form-inline {
   display: inline-block !important;
