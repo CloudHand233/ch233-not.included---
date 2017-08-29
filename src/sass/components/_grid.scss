@@ -9,7 +9,8 @@
 @import "../core/mixins";
 @import "../core/colors";
 @import "../core/breakpoints";
-
+/* unify style
+   ========================================================================== */
 @mixin col-normal($padding:.4rem) {
   padding: $padding;
   flex: 1 1 auto;
@@ -26,7 +27,8 @@
   align-items: flex-start;
   align-content: flex-start;// grid flex layout end
 }
-
+/* grid start
+   ========================================================================== */
 // no @media
 .grid {
   @include element-size(auto);
@@ -143,5 +145,26 @@
         @include col-normal();
       }
     }
+  }
+}
+// 要去除行的沟槽，为 `grid-row` 添加 `row-no-gutter` 类名；
+// 要删除栅格中单元格的空隙，为 `grid-row` 添加 `col-no-gutter` 类名；
+// 要同时删除所有空隙，为 `grid-row` 添加 `no-gutter` 类名
+.row-no-gutter {
+  margin: 0!important;
+  padding: 0!important;
+}
+.col-no-gutter {
+  [class^=col] {
+    margin: 0!important;
+    padding: 0!important;
+  }
+}
+.no-gutter {
+  margin: 0!important;
+  padding: 0!important;
+  [class^=col] {
+    margin: 0!important;
+    padding: 0!important;
   }
 }

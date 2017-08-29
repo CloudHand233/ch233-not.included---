@@ -1606,6 +1606,10 @@ template {
     }
   }
  */
+/* unify style
+   ========================================================================== */
+/* grid start
+   ========================================================================== */
 .grid {
   width: auto;
   position: relative;
@@ -2409,7 +2413,28 @@ template {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box; } }
 
+.row-no-gutter {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.col-no-gutter [class^=col] {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.no-gutter {
+  margin: 0 !important;
+  padding: 0 !important; }
+  .no-gutter [class^=col] {
+    margin: 0 !important;
+    padding: 0 !important; }
+
 /* import theme
+   ========================================================================== */
+/*!
+  * Author: うつせみ
+  * LastUpdate: 2017.Aug.25th
+*/
+/* import
    ========================================================================== */
 /*!
   * Author: うつせみ
@@ -2947,6 +2972,10 @@ template {
    ========================================================================== */
 /* Radial Gradient, from edge to center
    ========================================================================== */
+/* clear font rendering
+   ========================================================================== */
+/* layout
+   ========================================================================== */
 .page {
   background: rgba(63, 81, 181, 0.1); }
 
@@ -3007,7 +3036,10 @@ template {
 
 .container {
   margin: 1rem auto;
-  padding: 0 0 1rem 0; }
+  padding: 0; }
+
+.wrapper-padded {
+  padding: 1.5rem; }
 
 .footer {
   margin: 1rem auto 0 auto;
@@ -3021,6 +3053,100 @@ template {
   display: block;
   margin: 0 auto; }
 
+.card {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.87);
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem; }
+
+/* text
+   ========================================================================== */
+h1, .tt-h1 {
+  font-size: 5.6rem;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: left;
+  font-weight: bold; }
+
+h2, .tt-h2 {
+  font-size: 2.8rem;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: left;
+  font-weight: bold; }
+
+h3, .tt-h3 {
+  font-size: 2.25rem;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: left;
+  font-weight: bold; }
+
+h4, .tt-h4 {
+  font-size: 1.75rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  font-weight: bold; }
+
+h5, .tt-h5 {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  font-weight: bold; }
+
+h6, .tt-h6 {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  font-weight: bold; }
+
+.card-headline {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left; }
+
+.card-tt {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left; }
+
+.wrapper-headline {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  font-weight: bold; }
+
+.wrapper-tt {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  font-weight: bold; }
+
+.section-tt {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left; }
+
+.inline-tt {
+  font-size: 0.6rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  font-weight: bold; }
+
+div {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  line-height: 1.6rem; }
+
+p {
+  font-size: 0.6rem;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: left;
+  line-height: 1.2rem; }
+
+/*!
+  * Author: うつせみ
+  * LastUpdate: 2017.Aug.25th
+*/
 /*!
   * Author: うつせみ
   * LastUpdate: 2017.Aug.25th

@@ -18,7 +18,7 @@
   padding: $padding;
 }
 
-@mixin element-text($font-size:.7rem,$color:null,$text-align: left,$font-weight: null) {
+@mixin element-text($font-size:.7,$color:null,$text-align: left,$font-weight: null) {
   font-size: $font-size * 1rem;
   color: $color;
   text-align: $text-align;
