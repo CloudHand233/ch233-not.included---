@@ -36,30 +36,6 @@
     background: rgba(0,0,0,.87);
   }
 }
-
-.btn-inline {
-  display: inline-block!important;
-  vertical-align: middle!important;
-  *vertical-align: auto!important;
-  *zoom: 1!important;
-  *display: inline!important;
-}
-
-// buttons group
-.btn-gp {
-  @include element-space(.2rem .4rem,.4rem);
-}
-.btn-gp-inline {
-  @include element-space(.2rem .4rem,.4rem);
-  .btn {
-    display: inline-block!important;
-    vertical-align: middle!important;
-    *vertical-align: auto!important;
-    *zoom: 1!important;
-    *display: inline!important;
-    @include element-space(.8rem .3rem);
-  }
-}
 // color match style
 .btn-primary {
   background: $color-primary500;

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/*!
+  * Author: うつせみ
+  * LastUpdate: 2017.Aug.25th
+*/
+
+/* import
+   ========================================================================== */
+@import "../core/mixins";
+@import "../core/colors";
+@import "../core/gradients";
+
+/* input
+   ========================================================================== */
+.input-text {
+  @include element-size();
+  @include element-text(.7,rgba(0,0,0,.87));
+  @include element-horizontally(2.1rem);
+  @include element-space(.8rem .6rem,0 .5rem);
+  display: block;
+  @include element-link(rgba(255,255,255,.87));
+  @include border-radius(.3rem);
+  border: 1px solid rgba(0,0,0,.26);
+  input {
+    @include element-size(96%);
+    @include element-psi-absolute(0,0,0,0);
+    display: block;
+    @include element-horizontally(2.1rem);
+    @include element-space(0,0 2%0);
+    border: none;
+    @include border-radius(.4rem);
+  }
+}
+
+.input-icon {
+  @extend .input-text;
+  i {
+    @include element-psi-absolute(0,null,0,.5rem);
+    @include element-horizontally(2.1rem);
+    @include element-space(0,0);
+    display: block;
+    z-index: 99;
+    color: rgba(0,0,0,.54);
+  }
+  input {
+    @include element-size(98%);
+    @include element-psi-absolute(0,0,0,0);
+    display: block;
+    @include element-horizontally(2.1rem);
+    @include element-space(0,0 2% 0 0);
+    border: none;
+    text-indent: 3em;
+    @include border-radius(.4rem);
+  }
+}
+// form elements inline-block
+.form-inline {
+  display: inline-block!important;
+  vertical-align: middle!important;
+  *vertical-align: auto!important;
+  *zoom: 1!important;
+  *display: inline!important;
+}
+// form groups
+.form-gp {
+  position: relative;
+  @include element-space(.2rem .4rem,.4rem);
+  display: block;
+}
+.form-gp-inline {
+  position: relative;
+  @include element-space(.2rem .4rem,.4rem);
+  display: inline-block!important;
+  vertical-align: middle!important;
+  *vertical-align: auto!important;
+  *zoom: 1!important;
+  *display: inline!important;
+}
