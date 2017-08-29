@@ -9,6 +9,90 @@
 
 ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，是我们能够微笑面对自己的不完美，以及别人的不完美。
 ---
+## Buttons 按钮
+### 按钮的基本结构：
+```html
+<div class="btn character-5">
+	<a href="#">BUTTON</a>
+</div>
+```
+
+* `btn` 是申明一个按钮，默认 `display:block;` ；
+* `character-*` 制定按钮宽度，不制定，则按钮为全宽度；
+* `btn-inline` 会改变按钮为 inline-blcok ，可以横排；
+* 按钮色 btn-primary 是主色调（500色度）；
+* 按钮色 btn-secondary 是次色调（500色度）；
+* 按钮色 btn-less 是点缀色调（A700色度）；
+* 添加 `elevation-*` 产生 z 轴阴影；
+
+其他按钮色：
+* 500度标准色：**btn-颜色名**，如 `btn-red`
+* A700度高对比色：**btn-颜色名A700**，如 `btn-redA700`
+* 100度低饱和色：**btn-red100**，如 `btn-red100`
+
+### 成组的按钮
+```html
+<!-- 不改变按钮 block 的组 -->
+<div class="btn-gp">
+	<div class="btn character-5">
+		<a href="#">BUTTON</a>
+	</div>
+	<div class="btn character-5">
+		<a href="#">BUTTON</a>
+	</div>
+</div>
+<!-- 强行将 btn 改为 inline-block 的组 -->
+<div class="btn-gp-inline">
+	<div class="btn character-5">
+		<a href="#">BUTTON</a>
+	</div>
+	<div class="btn character-5">
+		<a href="#">BUTTON</a>
+	</div>
+	<div class="btn btn-inline btn-primary character-5">
+		<a href="#">BUTTON</a>
+	</div>
+</div>
+```
+
+* 虽然为按钮添加 `btn-inline` 可以让按钮横排，但是最好为按钮成组会更加科学；
+* 按钮组上还可添加对齐方式：`align-left` `align-center` `align-right` ；
+---
+## Grid 栅格
+我一直在犹豫要不要做兼容 IE8 及以下的栅格布局。最后思虑良久决定：GB IE8 及以下。
+栅格+兼容+断点，无疑会变成一套难以维护的布局，又背离了初衷，IE8 及以下，老老实实去写 theme，该怎么写怎么写，不做兼容。
+
+首先确认父级布局是 `content-block` 还是 `content-fluid`，默认情况下，`content-block` 是块状布局，有固定宽度，栅格系统将在不同视口宽度情况下按照断点对父级进行宽度重设；如果是 `content-fluid`，则表明父级是响应式布局，默认情况下父级拥有100%的宽度，栅格系统将在响应式的情况下跟随视口变化而变化。
+
+**请注意，content-block 本身不带断点判断，只有在内部使用了 grid 的时候才带有 @media  断点的判断。如果 content-block 自身还有父级的限制，就请使用 content-fluid 即可**
+
+**栅格为 16 格，每个 col* 为16/***
+
+栅格基本结构如下：
+```html
+<div class="grid">
+	<div class="grid-row">
+		<div class="col col-lg-2 col-md-4 col-sm-8">1</div>
+		<div class="col col-lg-2 col-md-4 col-sm-8">1</div>
+		<div class="col col-lg-2 col-md-4">1</div>
+		<div class="col col-lg-2 col-md-4">1</div>
+		<div class="col col-lg-2">1</div>
+		<div class="col col-lg-2">1</div>
+		<div class="col col-lg-2">1</div>
+	</div>
+</div>
+```
+
+类名 col 是无断点设置，宽度等于 col-1，带断点的 col 类名格式如下：
+
+**col-断点符号-栏占宽**
+
+可以在一个栏上同时使用多个断点设置，以让栏在不同断点下有不同布局，由于断点的设置，原本一栏中同一轴上多余的空间会::由剩余栏等宽补齐::。
+
+**no-gutter：无沟槽设置：**
+
+要去除行的沟槽，为 `grid-row` 添加 `row-no-gutter` 类名；要删除栅格中单元格的空隙，为 `grid-row` 添加 `col-no-gutter` 类名；要同时删除所有空隙，为 `grid-row` 添加 `no-gutter` 类名
+---
 ## Frame Set 管理系统布局
 基础布局如下：
 ```html
