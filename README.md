@@ -9,6 +9,258 @@
 
 ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，是我们能够微笑面对自己的不完美，以及别人的不完美。
 ---
+## Pagination 分页
+基本结构
+```html
+<ul class="pagination align-right">
+	<li>
+		<a href="#">
+			<i class="material-icons">first_page</i>
+		</a>
+	</li>
+	<li>
+		<a href="#">
+			<i class="material-icons">chevron_left</i>
+		</a>
+	</li>
+	<li class="current"><a>1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">...</a></li>
+	<li><a href="#">10</a></li>
+	<li>
+		<a href="#">
+			<i class="material-icons">chevron_right</i>
+		</a>
+	</li>
+	<li>
+		<a href="#">
+			<i class="material-icons">last_page</i>
+		</a>
+	</li>
+</ul>
+```
+
+* 分页可用于任何容器中，包括表格的单元格中
+* **依赖于 Materail Icons 组件**
+---
+## Table 表格
+一个表格的结构：
+```html
+<div class="table">
+	<table>
+		<tr>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+		</tr>
+		<tr>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+		</tr>
+		<tr>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+			<td class="td-tt">111</td>
+		</tr>
+	</table>
+</div>
+```
+---
+## Switch 开关
+Switch 开关从 checkbox 衍生而来，实际是 checkbox，外表是开关样式而已
+```html
+<div class="switch">
+	<label for="switch1">
+		<input type="checkbox" id="switch1">
+		<span>我只是个开关</span>
+	</label>
+</div>
+```
+
+* 可使用 form-inline ，以及成组方式
+* 依赖 ch233.js
+* 可以为结构中的 span 添加 z 轴阴影增加效果
+---
+## Checkbox 多选
+### 原生的 checkbox 样式
+Checkbox 也同样强烈建议一开始就使用成组的结构（成组结构还能改善多个元素纵向排布时的上下间距过大问题）：
+```html
+<div class="form-gp">
+	<div class="checkbox">
+		<label for="checkbox1">
+			<input type="checkbox" id="checkbox1" name="">
+			<span>我选择我是 frog</span>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label for="checkbox2">
+			<input type="checkbox" id="checkbox2" name="">
+			<span>我选择你也是 frog</span>
+		</label>
+	</div>
+</div>
+```
+
+这是一个使用原生组件的 radio 样式，兼容 IE8 及以下，组的使用和其他 form 元素相同
+
+### 美化的 Checkbox 样式
+```html
+<div class="form-gp">
+	<div class="checkbox-icon">
+		<label for="checkbox3">
+			<input type="checkbox" id="checkbox3" name="">
+			<i class="material-icons">check_box_outline_blank</i>
+			<span>我选择我是 frog</span>
+		</label>
+	</div>
+	<div class="checkbox-icon">
+		<label for="checkbox4">
+			<input type="checkbox" id="checkbox4" name="">
+			<i class="material-icons">check_box_outline_blank</i>
+			<span>我选择你也是 frog</span>
+		</label>
+	</div>
+</div>
+```
+
+* 依赖 Materail ICONS 图标库
+* 依赖 ch233.js
+* 需要修改 icon 的颜色和大小，只需要针对结构内的 `<i>` 修改 `font-size` 和 `color` 即可
+---
+##  Radio 单选
+### 原生的 Radio 样式
+Radio 通常是以成组形式出现，所以强烈建议一开始就使用成组的结构（成组结构还能改善多个元素纵向排布时的上下间距过大问题）：
+```html
+<div class="form-gp">
+	<div class="radio form-inline">
+		<label for="radio1">
+			<input type="radio" id="radio1" name="radioGroup1">
+			<span>我是 frog</span>
+		</label>
+	</div>
+	<div class="radio form-inline">
+		<label for="radio2">
+			<input type="radio" id="radio2" name="radioGroup1">
+			<span>你才是 frog</span>
+		</label>
+	</div>
+</div>
+```
+
+这是一个使用原生组件的 radio 样式，兼容 IE8 及以下，组的使用和其他 form 元素相同
+
+### 美化的 Radio 样式
+```html
+<div class="form-gp">
+	<div class="radio-icon form-inline">
+		<label for="radio3">
+			<input type="radio" id="radio3" name="radioGroup2">
+			<i class="material-icons">panorama_fish_eye</i>
+			<span>我是 frog</span>
+		</label>
+	</div>
+	<div class="radio-icon form-inline">
+		<label for="radio4">
+			<input type="radio" id="radio4" name="radioGroup2">
+			<i class="material-icons">panorama_fish_eye</i>
+			<span>你才是 frog</span>
+		</label>
+	</div>
+</div>
+```
+
+* 依赖 Materail ICONS 图标库
+* 依赖 ch233.js
+* 需要修改 icon 的颜色和大小，只需要针对结构内的 `<i>` 修改 `font-size` 和 `color` 即可
+---
+## Textarea 多行文本输入框
+基本结构：
+```html
+<div class="textarea character-25">
+	<textarea name="" id=""></textarea>
+</div>
+```
+
+* textarea 没有带 icon 的样式
+* 支持使用 `character-*` 方式调整宽度，以及全宽；
+* 同样可以使用 `form-inline` 以及成组的形式
+---
+## select 选择器
+### select 选择器的基本结构
+```html
+<div class="selector">
+	<select name="" id="">
+		<option value="">AAAAAAAAA</option>
+		<option value="">BBBBB</option>
+		<option value="">CCCCCCCC</option>
+		<option value="">DDDDDDDDDDDDDDD</option>
+		<option value="">EEEEEEEEEE</option>
+	</select>
+</div>
+```
+
+### 带 icon 的选择器
+```html
+<div class="selector-icon character-10 form-inline">
+	<i class="material-icons">message</i>
+	<select name="" id="">
+		<option value="">11111</option>
+		<option value="">2222</option>
+		<option value="">333333333</option>
+		<option value="">44444444</option>
+		<option value="">555555555</option>
+	</select>
+</div>
+```
+
+其他使用方法同 input 一样
+---
+## input 输入框
+### input 的基本结构
+```html
+<div class="input-text character-22">
+	<input type="text">
+</div>
+```
+
+ * `input-text` 是申明一个输入框，默认 `display:block;` ；
+* `character-*` 制定按钮宽度，不制定，则输入框为全宽度，全宽情况下不能使用  `form-inline`；
+* `form-inline` 会改变按钮为 inline-blcok ，可以横排；
+
+### 一个带 icon 的输入框
+```html
+<div class="input-text input-icon character-22">
+	<i class="material-icons">email</i>
+	<input type="text">
+</div>
+```
+
+**注意：示例中的 icon 依赖于 Materail ICONS**
+
+### 成组的输入框
+```html
+<div class="form-gp-inline">
+	<div class="input-icon character-22 form-inline">
+		<i class="material-icons">email</i>
+		<input type="text">
+	</div>
+	<div class="input-icon character-22 form-inline">
+		<i class="material-icons">face</i>
+		<input type="text">
+	</div>
+</div>
+```
+
+* 为按钮组添加 `form-gp-inline` 可以让组成为 `inline-block`，与其他 `inline-block` 元素横排；
+* `form-gp-inlinee` 按钮组上还可添加对齐方式：`align-left` `align-center` `align-right` **（依赖 basic_style.scss theme）**；
+* 组内的输入框类型可以是带 icon 的，也可是不带 icon 的混编，组内元素排列方向取决于其元素自身是否是 `form-inline` 类型
+
+---
 ## Buttons 按钮
 ### 按钮的基本结构：
 ```html
@@ -19,7 +271,7 @@ ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，�
 
 * `btn` 是申明一个按钮，默认 `display:block;` ；
 * `character-*` 制定按钮宽度，不制定，则按钮为全宽度；
-* `btn-inline` 会改变按钮为 inline-blcok ，可以横排；
+* `form-inline` 会改变按钮为 inline-blcok ，可以横排**（依赖 input.scss 组件）**；
 * 按钮色 btn-primary 是主色调（500色度）；
 * 按钮色 btn-secondary 是次色调（500色度）；
 * 按钮色 btn-less 是点缀色调（A700色度）；
@@ -32,8 +284,8 @@ ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，�
 
 ### 成组的按钮
 ```html
-<!-- 不改变按钮 block 的组 -->
-<div class="btn-gp">
+<!-- block 的组 -->
+<div class="form-gp">
 	<div class="btn character-5">
 		<a href="#">BUTTON</a>
 	</div>
@@ -41,8 +293,8 @@ ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，�
 		<a href="#">BUTTON</a>
 	</div>
 </div>
-<!-- 强行将 btn 改为 inline-block 的组 -->
-<div class="btn-gp-inline">
+<!-- inline-block 的组 -->
+<div class="form-gp-inline">
 	<div class="btn character-5">
 		<a href="#">BUTTON</a>
 	</div>
@@ -55,8 +307,8 @@ ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，�
 </div>
 ```
 
-* 虽然为按钮添加 `btn-inline` 可以让按钮横排，但是最好为按钮成组会更加科学；
-* 按钮组上还可添加对齐方式：`align-left` `align-center` `align-right` ；
+* 为按钮组添加 `form-gp-inline` 可以让组成为 `inline-block`，与其他 `inline-block` 元素横排**（依赖 input.scss 组件）**；
+* `form-gp-inlinee` 按钮组上还可添加对齐方式：`align-left` `align-center` `align-right` **（依赖 basic_style.scss theme）**；
 ---
 ## Grid 栅格
 我一直在犹豫要不要做兼容 IE8 及以下的栅格布局。最后思虑良久决定：GB IE8 及以下。
@@ -320,8 +572,8 @@ release-zip: 发行 dist 版本，版本命名中带有 package.json 的版本�
 		|—— output （最终输出样式表的源）
 			|—— ch233.mini.scss （核心输出调用集合）
 	|—— js （js 脚本集合）
-		|—— components （组件集合）
-		|—— output （最终输出脚本的源）
+		|—— ch233.js （整合文件）
+		|—— _*.js （组件文件）
 	|—— fonts （webFonts 字体以及 webFonts 图标库）
 |—— releases-zip（发行包存放文件夹）
 	|—— ch233-`$npm_package_version`-dist.zip （含有版本号的 zip 文件）
