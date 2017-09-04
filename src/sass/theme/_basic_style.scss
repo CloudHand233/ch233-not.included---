@@ -3,6 +3,7 @@
   * Author: 云手
   * GitHub: https://github.com/CloudHand233/ch233-smile---
   * LastUpdate: 2017.Aug.25th
+  * Version: 3.0.0
 */
 
 /* import
@@ -130,7 +131,6 @@ h6,.tt-h6 {
 }
 div {
   @include element-text(.7,rgba(0,0,0,.87));
-  line-height: 1.6rem;
 }
 p {
   @include element-text(.6,rgba(0,0,0,.54));
