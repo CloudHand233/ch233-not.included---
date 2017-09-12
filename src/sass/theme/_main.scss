@@ -43,18 +43,49 @@
 }
 
 .cover {
-  @include element-size(auto,30rem);
-  @include element-space(0 auto 1rem auto);
+  @include element-size(auto,28rem);
+  @include element-space(0 auto);
   @include gradient-directional($color-primary300,$color-indigo700,30deg);
   .cover-img {
     @include element-psi-absolute(0,0,0,0);
-    @include element-horizontally(30rem,center);
-    background: url("../img/cover_bg.png") no-repeat center;
-    background-size: cover;
+    @include element-horizontally(28rem,center);
+    overflow: hidden;
   }
   .cover-logo {
     @include element-image-size(13rem);
     @include inline-block();
+    @include element-space(-4rem 0 0 0);
+  }
+  #coverImg {
+    @include element-psi-absolute(0,null,null,0);
+  }
+  .version-card {
+    @include element-size(16rem,2rem);
+    @include element-horizontally(2rem,center);
+    @include element-psi-absolute(null,null,4rem,50%);
+    @include element-space(0 0 0 -9rem);
+    background: rgba(255,255,255,.87);
+    @include element-text(1.2,null,center,bold);
+    @include element-link(rgba($color-primary500,.87));
+    a {
+      @include element-size(100%,100%);
+      display: block;
+    }
+  }
+}
+
+.intro-section {
+  @include element-size(auto,4rem);
+  @include element-border(.3rem solid rgba(255,255,255,.87));
+  @include element-space(0,2rem);
+  @include element-horizontally(4rem);
+  .intro-text {
+    @include inline-block();
+    line-height: 1.2;
+    @include element-space(0 0 0 25rem);
+    p {
+      @include element-space(.4rem 0 0 0);
+    }
   }
 }
 

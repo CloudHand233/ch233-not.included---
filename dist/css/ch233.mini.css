@@ -4902,7 +4902,8 @@ tbody {
         border: 0.05rem solid #BDBDBD;
         font-size: 0.7rem;
         color: rgba(0, 0, 0, 0.54);
-        text-align: left; }
+        text-align: left;
+        display: table-cell !important; }
         .table table tr td.td-tt {
           font-size: 0.7rem;
           color: rgba(0, 0, 0, 0.87);
@@ -7401,10 +7402,10 @@ p {
 
 .cover {
   width: auto;
-  height: 30rem;
+  height: 28rem;
   position: relative;
   display: block;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto;
   background-image: linear-gradient(30deg, #7986CB, #303F9F);
   background-repeat: repeat-x; }
   .cover .cover-img {
@@ -7413,11 +7414,10 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 30rem;
-    line-height: 30rem;
+    height: 28rem;
+    line-height: 28rem;
     text-align: center;
-    background: url("../img/cover_bg.png") no-repeat center;
-    background-size: cover; }
+    overflow: hidden; }
   .cover .cover-logo {
     width: 13rem;
     position: relative;
@@ -7426,10 +7426,65 @@ p {
     vertical-align: middle;
     *vertical-align: auto;
     *zoom: 1;
-    *display: inline; }
+    *display: inline;
+    margin: -4rem 0 0 0; }
     .cover .cover-logo img {
       width: 100%;
       display: block; }
+  .cover #coverImg {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .cover .version-card {
+    width: 16rem;
+    height: 2rem;
+    position: relative;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    margin: 0 0 0 -9rem;
+    background: rgba(255, 255, 255, 0.87);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold; }
+    .cover .version-card a, .cover .version-card a:link, .cover .version-card a:visited {
+      color: rgba(63, 81, 181, 0.87);
+      text-decoration: none; }
+    .cover .version-card a:hover {
+      color: #3f51b5;
+      text-decoration: none; }
+    .cover .version-card a {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: block;
+      display: block; }
+
+.intro-section {
+  width: auto;
+  height: 4rem;
+  position: relative;
+  display: block;
+  border: 0.3rem solid rgba(255, 255, 255, 0.87);
+  margin: 0;
+  padding: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: left; }
+  .intro-section .intro-text {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    line-height: 1.2;
+    margin: 0 0 0 25rem; }
+    .intro-section .intro-text p {
+      margin: 0.4rem 0 0 0; }
 
 .grid [class^=col] {
   background: #FFEBEE;

@@ -33,6 +33,7 @@ tbody {
         @include element-space(0,.25rem);
         @include element-border(.05rem solid $color-grey400);
         @include element-text(.7,rgba(0,0,0,.54));
+        display: table-cell!important;
         &.td-tt {
           @include element-text(.7,rgba(0,0,0,.87));
           background: $color-grey300;

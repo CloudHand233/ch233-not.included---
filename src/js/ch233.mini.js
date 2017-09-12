@@ -6,4 +6,5 @@
 $(document).ready(function () {
     formStyle();
     tabStyle();
+    drageTable();
 })
