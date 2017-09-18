@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ch233-smile</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <!-- main style sheet *necessary -->
+    <link rel="stylesheet" href="../dist/css/ch233.mini.css">
+</head>
+<body>
+
+<!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 -->
+<div class="page">
+
+    <!-- header 部分，包含导航和 logo -->
+    <div class="header header-ufo">
+        <div class="header-nav">
+            <!--<div class="nav-logo"><img src="img/logo_650x270_white_shadow.png"></div>-->
+            <ul class="nav-list nav-list-right">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">快速起步</a></li>
+                <li><a href="#">全局 CSS 样式</a></li>
+                <li><a href="#">JavaScript 脚本</a></li>
+
+                <li><a href="https://github.com/CloudHand233/ch233-smile---"><img src="../dist/img/github_64x.png">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- cover 部分，滚动图或静态图 -->
+    <div class="cover elevation-4 zindex-9">
+        <div class="cover-img">
+            <img id="coverImg" src="../dist/img/cover_bg.png">
+            <div class="cover-logo zindex-9"><img src="../dist/img/cover_logo.png"></div>
+        </div>
+        <div class="card version-card elevation-24">
+            <a href="#">smile.document (3.01)</a>
+        </div>
+    </div>
+
+    <!-- container 是主体内容区域 -->
+    <div class="container wrapper-padded">
+        <div class="card elevation-3">
+            <div class="tt-h4 align-center">Material Design Colors</div>
+            <!--颜色区域开始-->
+            <div class="colors-wrapper" id="colors">
+                <ul class="Red">
+                    <h6>Red</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Pink">
+                    <h6>Pink</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Purple">
+                    <h6>Purple</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="DeepPurple">
+                    <h6>Deep Purple</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Indigo">
+                    <h6>Indigo</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Blue">
+                    <h6>Blue</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="LightBlue">
+                    <h6>Light Blue</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Cyan">
+                    <h6>Cyan</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Teal">
+                    <h6>Teal</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Green">
+                    <h6>Green</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="LightGreen">
+                    <h6>Light Green</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Lime">
+                    <h6>Lime</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Yellow">
+                    <h6>Yellow</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Amber">
+                    <h6>Amber</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Orange">
+                    <h6>Orange</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="DeepOrange">
+                    <h6>Deep Orange</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                    <li>A700<span></span></li>
+                    <li>A400<span></span></li>
+                    <li>A200<span></span></li>
+                    <li>A100<span></span></li>
+                </ul>
+                <ul class="Brown">
+                    <h6>Brown</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                </ul>
+                <ul class="Grey">
+                    <h6>Grey</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                </ul>
+                <ul class="BlueGrey">
+                    <h6>Blue Grey</h6>
+                    <li>50<span></span></li>
+                    <li>100<span></span></li>
+                    <li>200<span></span></li>
+                    <li>300<span></span></li>
+                    <li>400<span></span></li>
+                    <li>500<span></span></li>
+                    <li>600<span></span></li>
+                    <li>700<span></span></li>
+                    <li>800<span></span></li>
+                    <li>900<span></span></li>
+                </ul>
+                <ul></ul>
+                <ul></ul>
+            </div>
+            <!--颜色区域结束-->
+        </div>
+    </div>
+
+    <!-- footer 是底部，链接 or 版权区域 -->
+    <div class="footer">
+        <div class="content-block">footer</div>
+    </div>
+
+</div>
+
+<!--Elements UED ch233.js-->
+<script type="text/javascript" src="../dist/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../dist/js/ch233.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#colors").find("ul").find("li").each(function () {
+            var rgbString = $(this).css("background-color");
+            var parts = rgbString.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+            delete (parts[0]);
+            for (var i = 1; i <= 3; ++i) {
+                parts[i] = parseInt(parts[i]).toString(16);
+                if (parts[i].length == 1) parts[i] = '0' + parts[i];
+            }
+            var hexString = parts.join('');
+            var upperCase = hexString.toUpperCase();
+
+            $(this).find("span").html("#"+upperCase);
+        });
+    });
+</script>
+
+
+</body>
+</html>

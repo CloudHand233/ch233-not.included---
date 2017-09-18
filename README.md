@@ -1,5 +1,10 @@
 # ch233-smile-3.0
 ---
+📅 2017/9/07
+
+* 修改了部分文件目录结构，稍后记得更新目录说明
+* 开始制作 guide 部分
+---
 📅 2017/8/28
 
 内滚动框架可能还是避不开，毕竟软件类型布局还是占到了 UI 界面的一大部分。
@@ -7,7 +12,7 @@
 ---
 📅 2017/8/25
 
-ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，是我们能够微笑面对自己的不完美，以及别人的不完美。
+ch233 第三版，代号 smile 。By 斯德哥尔摩^精分喵
 ---
 ## Pagination 分页
 基本结构
@@ -68,6 +73,22 @@ ch233 第三版，代号 smile 。我相信，能够让我们走的更远的，�
 			<td class="td-tt">111</td>
 		</tr>
 	</table>
+</div>
+```
+---
+## Tab 标签切换
+```html
+<div class="tabs">
+	<ul class="tabs-tt">
+		<li>Tab A</li>
+		<li>Tab B</li>
+		<li>Tab C</li>
+	</ul>
+	<div class="tabs-cont">
+		<div class="tab-cont">A 111</div>
+		<div class="tab-cont">B 222</div>
+		<div class="tab-cont">C 333</div>
+		</div>
 </div>
 ```
 ---
@@ -464,10 +485,10 @@ sass 中如何使用：
 * 注释的写法
 ```css
 /*!
-  * Author: うつせみ
-  * GitHub: https://github.com/CloudHand233/
-  * Version: 3.0.0
+  * Author: 云手
+  * GitHub: https://github.com/CloudHand233/ch233-smile---
   * LastUpdate: 2017.Aug.25th
+	* Version: 3.0.0
 */
 ```
 * 静默注释`//`用于阐述各个部件和版块的使用、说明、释义
