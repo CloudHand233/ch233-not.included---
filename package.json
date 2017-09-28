@@ -11,7 +11,16 @@
     "watch:js": "onchange \"src/js/*.js\" -- npm run uglify",
     "serve": "browser-sync start --startPath \"guide/default.html\" --port 2333 --server --files=\"dist/css/*.css, dist/js/*.js, dist/*/*.html, dist/*.html, guide/*.html\"",
     "ch233": "parallelshell \"npm run watch:scss\" \"npm run watch:js\" \"npm run serve\"",
-    "release-zip": "cd dist/ && zip -r9 ch233-$npm_package_version-dist.zip * && mv *.zip ../releases-zip"
+    "release-zip": "cd dist/ && zip -r9 ch233-$npm_package_version-dist.zip * && mv *.zip ../releases-zip",
+
+    "scss:touch": "node-sass --output-style nested --source-map true -o dist_touch/css src/sass/output_touch",
+    "uglify:touch": "uglifyjs src/js_touch/* -m -c -o dist_touch/js/ch233_touch.min.js",
+    "build:all:touch": "npm run scss:touch && npm run uglify:touch",
+    "watch:scss:touch": "onchange \"src/sass/*/*.scss\" -- npm run scss:touch",
+    "watch:js:touch": "onchange \"src/js_touch/*.js\" -- npm run uglify:touch",
+    "serve:touch": "browser-sync start --startPath \"dist_touch/default.html\" --port 2333 --server --files=\"dist_touch/css/*.css, dist_touch/js/*.js, dist_touch/*/*.html, dist_touch/*.html\"",
+    "ch233:touch": "parallelshell \"npm run watch:scss:touch\" \"npm run watch:js:touch\" \"npm run serve:touch\"",
+    "release-zip:touch": "cd dist_touch/ && zip -r9 ch233-$npm_package_version-dist_touch.zip * && mv *.zip ../releases-zip"
   },
   "author": "うつせみ",
   "license": "ISC",

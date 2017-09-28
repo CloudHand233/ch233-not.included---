@@ -13,7 +13,7 @@
 @import "../core/breakpoints";
 /* unify style
    ========================================================================== */
-@mixin col-normal($padding:.4rem) {
+@mixin col-normal($padding:.8rem) {
   padding: $padding;
   flex: 1 1 auto;
   align-self: flex-start;

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ch233-smile</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- main style sheet *necessary -->
+    <link rel="stylesheet" href="css/ch233.mini.css">
+</head>
+<body>
+
+<!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 -->
+<div class="page">
+
+    <!-- header 部分，包含导航和 logo -->
+    <div class="header header-ufo">
+        <div class="header-nav">
+            <!--<div class="nav-logo"><img src="img/logo_650x270_white_shadow.png"></div>-->
+            <ul class="nav-list nav-list-right">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">快速起步</a></li>
+                <li><a href="#">全局 CSS 样式</a></li>
+                <li><a href="#">JavaScript 脚本</a></li>
+
+                <li><a href="https://github.com/CloudHand233/ch233-smile---"><img src="img/github_64x.png">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="sm-header-btn">
+            <i class="material-icons">menu</i>
+        </div>
+    </div>
+
+    <!-- cover 部分，滚动图或静态图 -->
+    <div class="cover elevation-4 zindex-9" style="height: 440px; overflow: hidden">
+        <div class="cover-img">
+            <img id="coverImg" src="img/cover_bg.png">
+            <div class="cover-logo zindex-9"><img src="img/cover_logo.png"></div>
+        </div>
+        <!--<div class="card version-card elevation-24">-->
+            <!--<a href="#">smile.document (3.01)</a>-->
+        <!--</div>-->
+    </div>
+
+    <!-- container 是主体内容区域 -->
+    <div class="container wrapper-padded">
+        <div class="card">
+            <h5 class="tt-h5 align-center">精分喵^懒癌犯病中（打滚撒赖）...</h5>
+            <br>
+            <h5 class="tt-h5 align-center">再等等就粗来鸟 ㄟ(▔,▔)ㄏ 乌鸦坐飞机</h5>
+        </div>
+    </div>
+
+    <!-- footer 是底部，链接 or 版权区域 -->
+    <div class="footer">
+        <div class="content-block">
+            <div class="foot-map">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">快速起步</a></li>
+                    <li><a href="#">全局样式</a></li>
+                    <li><a href="#">Javascript 脚本</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="foot-logo"><img src="img/logo_650x270_primary_no_shadow.png"></div>
+            <p class="align-center">Copyright @2017. 斯德哥尔摩^精分喵 All rights reserved.</p>
+        </div>
+    </div>
+
+</div>
+
+<!--Elements UED ch233.js-->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/ch233.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".card-li").mouseenter(function () {
+            $(this).addClass("elevation-16");
+            $(this).find(".card-li-img").stop().animate(
+                {"width":"100%","margin-top":"-2%"}
+                ,200);
+        });
+        $(".card-li").mouseleave(function () {
+            $(this).removeClass("elevation-16");
+            $(this).find(".card-li-img").stop().animate(
+                {"width":"98%","margin-top":"0"}
+                ,200);
+        });
+
+        $(".sm-header-btn").mousedown(function () {
+            $(".nav-list").slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>

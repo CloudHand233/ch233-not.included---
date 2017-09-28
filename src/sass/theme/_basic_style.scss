@@ -146,3 +146,10 @@ p {
 .align-right {
   text-align: right;
 }
+
+.fluid-img {
+  img {
+    @include element-size(100%);
+    @include element-space(0,0);
+  }
+}
