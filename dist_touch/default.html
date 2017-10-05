@@ -4,34 +4,43 @@
     <meta charset="UTF-8">
     <title>ch233-smile--TOUCH</title>
     <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- touch meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- main style sheet *necessary -->
-    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="css/ch233_touch.mini.css">
 </head>
 <body>
 
 <!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 -->
 <div class="page">
 
-    <!-- header 部分，包含导航和 logo -->
-    <div class="">
-
+    <!-- header 标题栏部分 -->
+    <div class="header-tool">
+        <div class="header-tool-left"></div>
+        <div class="header-tt">标题文字</div>
+        <div class="header-tool-right"></div>
     </div>
 
-
+    <!-- header bar部分 -->
+    <div class="header-bar">
+        搜索
+    </div>
 
     <!-- container 是主体内容区域 -->
     <div class="container wrapper-padded">
 
     </div>
 
-    <!-- footer 是底部，链接 or 版权区域 -->
-    <div class="footer">
-
+    <!-- foo-bar 是底部，链接 or 版权区域 -->
+    <div class="foo">
+        <div class="foo-bar"></div>
     </div>
 
 </div>
 
-<!--Elements UED ch233.js-->
+<!--Elements UED ch233_touch.js-->
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/ch233_touch.min.js"></script>
 

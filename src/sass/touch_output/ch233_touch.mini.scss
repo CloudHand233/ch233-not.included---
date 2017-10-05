@@ -14,12 +14,13 @@
 @import "../components/zdepth"; // Z 轴延伸样式 shadows & z-index
 @import "../components/extend"; // 扩展样式库
 
-/* touch library
+/* import touch_components
    ========================================================================== */
+
 
 /* import theme
    ========================================================================== */
-@import "../theme/basic_style"; // 基本元素样式 & 基本布局库 *必须
-@import "../theme/main";
+@import "../touch_theme/basic_style"; // touch 版基础样式表
+@import "../touch_theme/main"; // touch 版主样式表
 
 

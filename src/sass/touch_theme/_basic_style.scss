@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/*!
+  * Ch233-smile--TOUCH version
+  * Author: 云手
+  * GitHub: https://github.com/CloudHand233/ch233-smile---
+  * LastUpdate: 2017.Aug.25th
+  * Version: 1.0.0
+*/
+
+/* import
+   ========================================================================== */
+@import "../core/mixins";
+@import "../core/colors";
+@import "../core/gradients";
+/* clear font rendering
+   ========================================================================== */
+* {
+  @extend %clear-font;
+}
+/* layout
+   ========================================================================== */
+a:link,a:visited {
+  color: rgba(0,0,0,.54);
+}
+a:hover {
+  color: rgba(0,0,0,.87);
+}
+
+.page {
+  @include element-size(100%,100%);
+  @include element-psi-absolute(0,null,null,0);
+  @include element-space(0,0);
+  background: rgba($color-primary500,.1);
+}
+
+$header-tool-height:2.2rem;
+$header-bar-height:2.2rem;
+
+.header-tool {
+  @include element-psi-fixed(0,0,null,0);
+  height: $header-tool-height;
+  background: rgba($color-primary500,.7);
+}
+
+.header-bar {
+  @include element-psi-fixed($header-tool-height,0,null,0);
+  height: $header-bar-height;
+  background: rgba($color-primary500,.7);
+}
+
+.container {
+  @include element-psi-absolute(0,0,0,0);
+  display: block;
+  @include element-space(0,0);
+}
+.wrapper-padded {
+  @include element-space(null,1.5rem);
+}
+
+.header-tool + .container {
+  top: $header-tool-height;
+}
+.header-bar + .container {
+  top: $header-tool-height + $header-bar-height;
+}
+
+
+
+
+.footer {
+  @include element-space(1rem auto 0 auto,1rem 0);
+  @include element-border(null,.05rem rgba($color-primary500,.27) solid);
+  background: #fff;
+}
+
+.card {
+  @include element-space(null,1rem);
+  background: rgba(255,255,255,.87);
+  @include border-radius(.4rem);
+}
+
+/* text
+   ========================================================================== */
+h1,.tt-h1 {
+  @include element-text(5.6,rgba(0,0,0,.54));
+  font-weight: bold;
+}
+h2,.tt-h2 {
+  @include element-text(2.8,rgba(0,0,0,.54));
+  font-weight: bold;
+}
+h3,.tt-h3 {
+  @include element-text(2.25,rgba(0,0,0,.54));
+  font-weight: bold;
+}
+h4,.tt-h4 {
+  @include element-text(1.75,rgba(0,0,0,.87));
+  font-weight: bold;
+}
+h5,.tt-h5 {
+  @include element-text(1.2,rgba(0,0,0,.87));
+  font-weight: bold;
+}
+h6,.tt-h6 {
+  @include element-text(1,rgba(0,0,0,.87));
+  font-weight: bold;
+}
+
+.card-headline {
+  @include element-text(.9,rgba(0,0,0,.87));
+}
+.card-tt {
+  @include element-text(.8,rgba(0,0,0,.87));
+}
+
+.wrapper-headline {
+  @include element-text(1,rgba(0,0,0,.87));
+  font-weight: bold;
+}
+.wrapper-tt {
+  @include element-text(.8,rgba(0,0,0,.87));
+  font-weight: bold;
+}
+
+.section-tt {
+  @include element-text(.7,rgba(0,0,0,.87));
+}
+
+.inline-tt {
+  @include element-text(.6,rgba(0,0,0,.87));
+  font-weight: bold;
+}
+div {
+  @include element-text(.7,rgba(0,0,0,.87));
+}
+p {
+  @include element-text(.6,rgba(0,0,0,.54));
+  line-height: 1.2rem;
+}
+
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+
+.fluid-img {
+  img {
+    @include element-size(100%);
+    @include element-space(0,0);
+  }
+}
