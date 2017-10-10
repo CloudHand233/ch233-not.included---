@@ -89,6 +89,11 @@
     @include inline-block();
     @include element-space(-4rem 0 0 0);
   }
+  .cover-theme {
+    @include element-image-size(38rem);
+    @include element-psi-absolute(null,null,0,50%);
+    @include element-space(0 0 0 -19rem);
+  }
   #coverImg {
     @include element-psi-absolute(0,null,null,0);
   }

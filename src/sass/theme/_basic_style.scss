@@ -61,6 +61,9 @@ a:hover {
 }
 .wrapper-padded {
   @include element-space(null,1.5rem);
+  .card:last-of-type {
+    margin-bottom: 0;
+  }
 }
 .footer {
   @include element-space(1rem auto 0 auto,1rem 0);
@@ -74,7 +77,7 @@ a:hover {
 }
 
 .card {
-  @include element-space(null,1rem);
+  @include element-space(0 auto 2rem auto,1rem);
   background: rgba(255,255,255,.87);
   @include border-radius(.4rem);
 }

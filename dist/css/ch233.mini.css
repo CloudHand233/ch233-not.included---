@@ -6715,6 +6715,8 @@ a:hover {
 
 .wrapper-padded {
   padding: 1.5rem; }
+  .wrapper-padded .card:last-of-type {
+    margin-bottom: 0; }
 
 .footer {
   margin: 1rem auto 0 auto;
@@ -6729,6 +6731,7 @@ a:hover {
   margin: 0 auto; }
 
 .card {
+  margin: 0 auto 2rem auto;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.87);
   -webkit-border-radius: 0.4rem;
@@ -7488,6 +7491,17 @@ p {
     *display: inline;
     margin: -4rem 0 0 0; }
     .cover .cover-logo img {
+      width: 100%;
+      display: block; }
+  .cover .cover-theme {
+    width: 38rem;
+    position: relative;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 0 -19rem; }
+    .cover .cover-theme img {
       width: 100%;
       display: block; }
   .cover #coverImg {
