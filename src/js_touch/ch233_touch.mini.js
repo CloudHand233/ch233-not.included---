@@ -3,6 +3,6 @@
  //  * LastUpdate: 2017.Aug.25th
  //  * Version: 3.0.0
 
-$(document).ready(function () {
-
-})
+$(function () {
+    formStyle();
+});
