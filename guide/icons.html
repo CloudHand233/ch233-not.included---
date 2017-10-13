@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ch233-smile</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <!-- main style sheet *necessary -->
+    <link rel="stylesheet" href="../dist/css/ch233.mini.css">
+</head>
+<body>
+
+<!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 -->
+<div class="page">
+
+    <!-- header 部分，包含导航和 logo -->
+    <div class="header header-ufo header-guide">
+        <div class="header-nav">
+            <!--<div class="nav-logo"><img src="img/logo_650x270_white_shadow.png"></div>-->
+            <ul class="nav-list nav-list-right">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">快速起步</a></li>
+                <li><a href="#">全局 CSS 样式</a></li>
+                <li><a href="#">JavaScript 脚本</a></li>
+
+                <li><a href="https://github.com/CloudHand233/ch233-smile---"><img src="../dist/img/github_64x.png">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- container 是主体内容区域 -->
+    <div class="container wrapper-padded">
+        <div class="card elevation-3">
+            <div class="tt-h4 align-center">ICONS</div>
+            <!--图标区域开始-->
+             <div class="icons-wrapper">
+                 <div class="section-tt">ACTIONS</div>
+                <ul>
+                    <li>
+                        <i class="material-icons">3d_rotation</i>
+                    </li>
+                    <li>
+                        <i class="material-icons">3d_rotation</i>
+                    </li>
+                    <li>
+                        <i class="material-icons">3d_rotation</i>
+                    </li>
+                    <li>
+                        <i class="material-icons">3d_rotation</i>
+                    </li>
+                    <li>
+                        <i class="material-icons">3d_rotation</i>
+                    </li>
+                </ul>
+             </div>
+            <!--图标区域结束-->
+        </div>
+    </div>
+
+    <!-- footer 是底部，链接 or 版权区域 -->
+    <div class="footer">
+        <div class="content-block">footer</div>
+    </div>
+
+</div>
+
+<!--Elements UED ch233.js-->
+<script type="text/javascript" src="../dist/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../dist/js/ch233.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#colors").find("ul").find("li").each(function () {
+            var rgbString = $(this).css("background-color");
+            var parts = rgbString.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+            delete (parts[0]);
+            for (var i = 1; i <= 3; ++i) {
+                parts[i] = parseInt(parts[i]).toString(16);
+                if (parts[i].length == 1) parts[i] = '0' + parts[i];
+            }
+            var hexString = parts.join('');
+            var upperCase = hexString.toUpperCase();
+
+            $(this).find("span").html("#"+upperCase);
+        });
+    });
+</script>
+
+
+</body>
+</html>

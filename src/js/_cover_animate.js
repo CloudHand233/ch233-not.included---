@@ -11,17 +11,18 @@
 
 //cover_bg.gif animate
 function coverAnimate() {
-    $("#coverImg").css({"top": "0px","left": "0px"});
-    $("#coverImg").animate({
-        top: '-687px',
-        left: '-1010px'
-    },7000);
-    $("#coverImg").animate({
-        left: '0'
-    },2000);
-    $("#coverImg").animate({
-        left: '-1010px'
-    },1400);
+    $("#coverImg")
+        .css({"top": "0px","left": "0px"})
+        .stop().animate({
+            top: '-687px',
+            left: '-1010px'
+        },20000)
+        .stop().animate({
+            left: '0'
+        },2000)
+        .stop().animate({
+            left: '-1010px'
+        },10000);
 }
 coverAnimate();
-setInterval(coverAnimate,15000);
+setInterval(coverAnimate,35000);

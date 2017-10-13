@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+/*!
+  * Author: 云手
+  * GitHub: https://github.com/CloudHand233/ch233-smile---
+  * LastUpdate: 2017.Aug.25th
+  * Version: 3.0.0
+*/
+
+/* import
+   ========================================================================== */
+@import "../core/mixins";
+@import "../core/colors";
+@import "../core/gradients";
+
+/* this page
+   ========================================================================== */
+.colors-wrapper {
+  @include element-size();
+  @include element-text(.7,rgba(0,0,0,.87),center);
+  @include element-space(2.5rem 1rem 0);
+  vertical-align: top;
+  ul {
+    @include element-size(26%);
+    @include inline-block();
+    @include element-space(0 1.8% 2.4rem);
+    vertical-align: top;
+    li {
+      @include element-horizontally(2rem);
+      @include element-text(.7,rgba(0,0,0,.87),right);
+      span {
+        @include element-size(4rem);
+        @include element-space(0 .8rem);
+        @include inline-block();
+      }
+    }
+    h6 {
+      @include element-horizontally(1.8rem,right);
+      @include element-space(null,0 .4rem 0 0);
+    }
+  }
+}
+
+.Red {
+  li:nth-of-type(1) {
+    background: $color-red50;
+  }
+  li:nth-of-type(2) {
+    background: $color-red100;
+  }
+  li:nth-of-type(3) {
+    background: $color-red200;
+  }
+  li:nth-of-type(4) {
+    background: $color-red300;
+  }
+  li:nth-of-type(5) {
+    background: $color-red400;
+  }
+  li:nth-of-type(6) {
+    background: $color-red500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-red600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-red700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-red800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-red900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-redA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-redA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-redA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-redA100;
+  }
+}
+
+.Pink {
+  li:nth-of-type(1) {
+    background: $color-pink50;
+  }
+  li:nth-of-type(2) {
+    background: $color-pink100;
+  }
+  li:nth-of-type(3) {
+    background: $color-pink200;
+  }
+  li:nth-of-type(4) {
+    background: $color-pink300;
+  }
+  li:nth-of-type(5) {
+    background: $color-pink400;
+  }
+  li:nth-of-type(6) {
+    background: $color-pink500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-pink600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-pink700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-pink800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-pink900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-pinkA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-pinkA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-pinkA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-pinkA100;
+  }
+}
+
+.Purple {
+  li:nth-of-type(1) {
+    background: $color-purple50;
+  }
+  li:nth-of-type(2) {
+    background: $color-purple100;
+  }
+  li:nth-of-type(3) {
+    background: $color-purple200;
+  }
+  li:nth-of-type(4) {
+    background: $color-purple300;
+  }
+  li:nth-of-type(5) {
+    background: $color-purple400;
+  }
+  li:nth-of-type(6) {
+    background: $color-purple500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-purple600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-purple700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-purple800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-purple900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-purpleA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-purpleA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-purpleA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-purpleA100;
+  }
+}
+
+.DeepPurple {
+  li:nth-of-type(1) {
+    background: $color-deep-purple50;
+  }
+  li:nth-of-type(2) {
+    background: $color-deep-purple100;
+  }
+  li:nth-of-type(3) {
+    background: $color-deep-purple200;
+  }
+  li:nth-of-type(4) {
+    background: $color-deep-purple300;
+  }
+  li:nth-of-type(5) {
+    background: $color-deep-purple400;
+  }
+  li:nth-of-type(6) {
+    background: $color-deep-purple500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-deep-purple600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-deep-purple700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-deep-purple800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-deep-purple900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-deep-purpleA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-deep-purpleA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-deep-purpleA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-deep-purpleA100;
+  }
+}
+
+.Indigo {
+  li:nth-of-type(1) {
+    background: $color-indigo50;
+  }
+  li:nth-of-type(2) {
+    background: $color-indigo100;
+  }
+  li:nth-of-type(3) {
+    background: $color-indigo200;
+  }
+  li:nth-of-type(4) {
+    background: $color-indigo300;
+  }
+  li:nth-of-type(5) {
+    background: $color-indigo400;
+  }
+  li:nth-of-type(6) {
+    background: $color-indigo500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-indigo600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-indigo700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-indigo800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-indigo900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-indigoA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-indigoA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-indigoA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-indigoA100;
+  }
+}
+
+.Blue {
+  li:nth-of-type(1) {
+    background: $color-blue50;
+  }
+  li:nth-of-type(2) {
+    background: $color-blue100;
+  }
+  li:nth-of-type(3) {
+    background: $color-light-blue200;
+  }
+  li:nth-of-type(4) {
+    background: $color-blue300;
+  }
+  li:nth-of-type(5) {
+    background: $color-blue400;
+  }
+  li:nth-of-type(6) {
+    background: $color-blue500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-blue600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-blue700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-blue800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-blue900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-blueA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-blueA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-blueA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-blueA100;
+  }
+}
+
+.LightBlue {
+  li:nth-of-type(1) {
+    background: $color-light-blue50;
+  }
+  li:nth-of-type(2) {
+    background: $color-light-blue100;
+  }
+  li:nth-of-type(3) {
+    background: $color-light-blue200;
+  }
+  li:nth-of-type(4) {
+    background: $color-light-blue300;
+  }
+  li:nth-of-type(5) {
+    background: $color-light-blue400;
+  }
+  li:nth-of-type(6) {
+    background: $color-light-blue500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-light-blue600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-light-blue700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-light-blue800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-light-blue900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-light-blueA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-light-blueA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-light-blueA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-light-blueA100;
+  }
+}
+
+.Cyan {
+  li:nth-of-type(1) {
+    background: $color-cyan50;
+  }
+  li:nth-of-type(2) {
+    background: $color-cyan100;
+  }
+  li:nth-of-type(3) {
+    background: $color-cyan200;
+  }
+  li:nth-of-type(4) {
+    background: $color-cyan300;
+  }
+  li:nth-of-type(5) {
+    background: $color-cyan400;
+  }
+  li:nth-of-type(6) {
+    background: $color-cyan500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-cyan600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-cyan700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-cyan800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-cyan900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-cyanA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-cyanA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-cyanA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-cyanA100;
+  }
+}
+
+.Teal {
+  li:nth-of-type(1) {
+    background: $color-teal50;
+  }
+  li:nth-of-type(2) {
+    background: $color-teal100;
+  }
+  li:nth-of-type(3) {
+    background: $color-teal200;
+  }
+  li:nth-of-type(4) {
+    background: $color-teal300;
+  }
+  li:nth-of-type(5) {
+    background: $color-teal400;
+  }
+  li:nth-of-type(6) {
+    background: $color-teal500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-teal600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-teal700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-teal800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-teal900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-tealA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-tealA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-tealA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-tealA100;
+  }
+}
+
+.Green {
+  li:nth-of-type(1) {
+    background: $color-green50;
+  }
+  li:nth-of-type(2) {
+    background: $color-green100;
+  }
+  li:nth-of-type(3) {
+    background: $color-green200;
+  }
+  li:nth-of-type(4) {
+    background: $color-green300;
+  }
+  li:nth-of-type(5) {
+    background: $color-green400;
+  }
+  li:nth-of-type(6) {
+    background: $color-green500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-green600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-green700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-green800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-green900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-greenA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-greenA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-greenA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-greenA100;
+  }
+}
+
+.LightGreen {
+  li:nth-of-type(1) {
+    background: $color-light-green50;
+  }
+  li:nth-of-type(2) {
+    background: $color-light-green100;
+  }
+  li:nth-of-type(3) {
+    background: $color-light-green200;
+  }
+  li:nth-of-type(4) {
+    background: $color-light-green300;
+  }
+  li:nth-of-type(5) {
+    background: $color-light-green400;
+  }
+  li:nth-of-type(6) {
+    background: $color-light-green500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-light-green600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-light-green700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-light-green800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-light-green900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-light-greenA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-light-greenA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-light-greenA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-light-greenA100;
+  }
+}
+
+.Lime {
+  li:nth-of-type(1) {
+    background: $color-lime50;
+  }
+  li:nth-of-type(2) {
+    background: $color-lime100;
+  }
+  li:nth-of-type(3) {
+    background: $color-lime200;
+  }
+  li:nth-of-type(4) {
+    background: $color-lime300;
+  }
+  li:nth-of-type(5) {
+    background: $color-lime400;
+  }
+  li:nth-of-type(6) {
+    background: $color-lime500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-lime600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-lime700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-lime800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-lime900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-limeA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-limeA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-limeA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-limeA100;
+  }
+}
+
+.Yellow {
+  li:nth-of-type(1) {
+    background: $color-yellow50;
+  }
+  li:nth-of-type(2) {
+    background: $color-yellow100;
+  }
+  li:nth-of-type(3) {
+    background: $color-yellow200;
+  }
+  li:nth-of-type(4) {
+    background: $color-yellow300;
+  }
+  li:nth-of-type(5) {
+    background: $color-yellow400;
+  }
+  li:nth-of-type(6) {
+    background: $color-yellow500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-yellow600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-yellow700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-yellow800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-yellow900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-yellowA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-yellowA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-yellowA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-yellowA100;
+  }
+}
+
+.Amber {
+  li:nth-of-type(1) {
+    background: $color-amber50;
+  }
+  li:nth-of-type(2) {
+    background: $color-amber100;
+  }
+  li:nth-of-type(3) {
+    background: $color-amber200;
+  }
+  li:nth-of-type(4) {
+    background: $color-amber300;
+  }
+  li:nth-of-type(5) {
+    background: $color-amber400;
+  }
+  li:nth-of-type(6) {
+    background: $color-amber500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-amber600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-amber700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-amber800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-amber900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-amberA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-amberA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-amberA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-amberA100;
+  }
+}
+
+.Orange {
+  li:nth-of-type(1) {
+    background: $color-orange50;
+  }
+  li:nth-of-type(2) {
+    background: $color-orange100;
+  }
+  li:nth-of-type(3) {
+    background: $color-orange200;
+  }
+  li:nth-of-type(4) {
+    background: $color-orange300;
+  }
+  li:nth-of-type(5) {
+    background: $color-orange400;
+  }
+  li:nth-of-type(6) {
+    background: $color-orange500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-orange600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-orange700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-orange800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-orange900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-orangeA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-orangeA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-orangeA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-orangeA100;
+  }
+}
+
+.DeepOrange {
+  li:nth-of-type(1) {
+    background: $color-deep-orange50;
+  }
+  li:nth-of-type(2) {
+    background: $color-deep-orange100;
+  }
+  li:nth-of-type(3) {
+    background: $color-deep-orange200;
+  }
+  li:nth-of-type(4) {
+    background: $color-deep-orange300;
+  }
+  li:nth-of-type(5) {
+    background: $color-deep-orange400;
+  }
+  li:nth-of-type(6) {
+    background: $color-deep-orange500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-deep-orange600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-deep-orange700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-deep-orange800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-deep-orange900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+  li:nth-of-type(11) {
+    background: $color-deep-orangeA700;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(12) {
+    background: $color-deep-orangeA400;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(13) {
+    background: $color-deep-orangeA200;
+  }
+  li:nth-of-type(14) {
+    background: $color-deep-orangeA100;
+  }
+}
+
+.Brown {
+  li:nth-of-type(1) {
+    background: $color-brown50;
+  }
+  li:nth-of-type(2) {
+    background: $color-brown100;
+  }
+  li:nth-of-type(3) {
+    background: $color-brown200;
+  }
+  li:nth-of-type(4) {
+    background: $color-brown300;
+  }
+  li:nth-of-type(5) {
+    background: $color-brown400;
+  }
+  li:nth-of-type(6) {
+    background: $color-brown500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-brown600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-brown700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-brown800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-brown900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+}
+
+.Grey {
+  li:nth-of-type(1) {
+    background: $color-grey50;
+  }
+  li:nth-of-type(2) {
+    background: $color-grey100;
+  }
+  li:nth-of-type(3) {
+    background: $color-grey200;
+  }
+  li:nth-of-type(4) {
+    background: $color-grey300;
+  }
+  li:nth-of-type(5) {
+    background: $color-grey400;
+  }
+  li:nth-of-type(6) {
+    background: $color-grey500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-grey600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-grey700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-grey800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-grey900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+}
+
+.BlueGrey {
+  li:nth-of-type(1) {
+    background: $color-blue-grey50;
+  }
+  li:nth-of-type(2) {
+    background: $color-blue-grey100;
+  }
+  li:nth-of-type(3) {
+    background: $color-blue-grey200;
+  }
+  li:nth-of-type(4) {
+    background: $color-blue-grey300;
+  }
+  li:nth-of-type(5) {
+    background: $color-blue-grey400;
+  }
+  li:nth-of-type(6) {
+    background: $color-blue-grey500;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(7) {
+    background: $color-blue-grey600;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(8) {
+    background: $color-blue-grey700;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(9) {
+    background: $color-blue-grey800;
+    color: rgba(255,255,255,.87);
+  }
+  li:nth-of-type(10) {
+    background: $color-blue-grey900;
+    color: rgba(255,255,255,.87);
+    margin-bottom: .6rem;
+  }
+}

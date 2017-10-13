@@ -112,6 +112,36 @@
   }
 }
 
+.ch233-tools {
+  @include element-size();
+  @include element-space(0 4rem 1rem);
+  text-align: justify;
+  display: table;
+  li {
+    @include element-size(25%);
+    display: table-cell;
+    text-align: center;
+    img {
+      @include element-size(50%);
+      @include element-space(0 auto);
+    }
+  }
+}
+
+.ch233-tools-t {
+  text-align: center;
+  @include element-space(0 0 3rem 0);
+  > p {
+    @include element-text(1.6,rgba($color-indigo500,.54),center);
+    font-weight: bold;
+    @include element-space(.6rem 0);
+  }
+  > p + p {
+    @include element-text(.8,rgba($color-000,.54),center);
+    font-weight: normal;
+  }
+}
+
 .card-list-wrapper {
   @include element-space(0,0);
   .grid {
@@ -203,4 +233,9 @@
     background: $color-red50;
     border: 1px solid $color-red100;
   }
+}
+
+.header-guide {
+  @include element-size();
+  @include gradient-directional($color-primary300,$color-indigo700,30deg);
 }
