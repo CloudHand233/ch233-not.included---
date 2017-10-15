@@ -27,10 +27,25 @@
     li {
       @include element-horizontally(2rem);
       @include element-text(.7,rgba(0,0,0,.87),right);
+      cursor: pointer;
+      position: relative;
       span {
         @include element-size(4rem);
         @include element-space(0 .8rem);
         @include inline-block();
+      }
+      b {
+        display: none;
+        @include element-psi-absolute(50%,null,null,1rem);
+        width: 2.6rem;
+        height: 1rem;
+        line-height: 1rem;
+        margin-top: -.6rem;
+        padding: .1rem;
+        @include element-text(.6,rgba($color-amber300,.87),center);
+        background: rgba($color-255,.9);
+        @include element-border(.05rem solid rgba($color-amber300,.2));
+        @include border-radius(.15rem);
       }
     }
     h6 {

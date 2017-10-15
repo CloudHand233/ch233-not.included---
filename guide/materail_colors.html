@@ -361,8 +361,22 @@
 <!--Elements UED ch233.js-->
 <script type="text/javascript" src="../dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../dist/js/ch233.min.js"></script>
+<script type="text/javascript" src="../dist/js/clipboard.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
+    function cliptoboard() {
+        var clipboard = new Clipboard('.current', {
+            target: function() {
+                return document.querySelector('#colorName');
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+    }
+    $(function () {
         $("#colors").find("ul").find("li").each(function () {
             var rgbString = $(this).css("background-color");
             var parts = rgbString.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -376,6 +390,22 @@
             var upperCase = hexString.toUpperCase();
 
             $(this).find("span").html("#"+upperCase);
+        });
+
+        $(".colors-wrapper")
+            .find("ul li")
+            .off("click").on("click",function () {
+                var c = $(this).find("span").html();
+                $(".colors-wrapper")
+                    .find("li").removeClass("current")
+                    .find("span").attr("id","");
+                $(this).addClass("current");
+                $(this).find("span").attr("id","colorName");
+                cliptoboard();
+                $(this).find("span").after("<b class='color-copy-log'>copy!</b>");
+                $(this).find("b").fadeIn(200);
+                setTimeout("$(\".color-copy-log\").fadeOut(200)",1000);
+                setTimeout("$(\".color-copy-log\").remove()",1200);
         });
     });
 </script>

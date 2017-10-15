@@ -8289,7 +8289,9 @@ p {
       text-align: left;
       font-size: 0.7rem;
       color: rgba(0, 0, 0, 0.87);
-      text-align: right; }
+      text-align: right;
+      cursor: pointer;
+      position: relative; }
       .colors-wrapper ul li span {
         width: 4rem;
         position: relative;
@@ -8300,6 +8302,24 @@ p {
         *vertical-align: auto;
         *zoom: 1;
         *display: inline; }
+      .colors-wrapper ul li b {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        width: 2.6rem;
+        height: 1rem;
+        line-height: 1rem;
+        margin-top: -.6rem;
+        padding: .1rem;
+        font-size: 0.6rem;
+        color: rgba(255, 213, 79, 0.87);
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 0.05rem solid rgba(255, 213, 79, 0.2);
+        -webkit-border-radius: 0.15rem;
+        -moz-border-radius: 0.15rem;
+        border-radius: 0.15rem; }
     .colors-wrapper ul h6 {
       height: 1.8rem;
       line-height: 1.8rem;
