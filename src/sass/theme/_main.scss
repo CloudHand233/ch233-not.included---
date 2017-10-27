@@ -76,14 +76,19 @@
 }
 
 .cover {
-  @include element-size(auto,24rem);
+  @include element-size(auto);
   @include element-space(0 auto);
-  @include gradient-directional($color-primary300,$color-indigo700,30deg);
-  @include element-border(null,null,null,.8rem solid $color-amber300);
+  //@include gradient-directional($color-primary300,$color-indigo700,30deg);
+  //@include element-border(null,null,null,.8rem solid $color-amber300);
+  background: none;
   .cover-img {
-    @include element-psi-absolute(0,0,0,0);
-    @include element-horizontally(24rem,center);
+    @include element-image-size(100%);
+    //@include element-psi-absolute(0,null,null,0);
+    //@include element-horizontally(24rem,center);
     overflow: hidden;
+    img {
+      width: 120%;
+    }
   }
   .cover-logo {
     @include element-image-size(13rem);
@@ -91,9 +96,9 @@
     @include element-space(-4rem 0 0 0);
   }
   .cover-theme {
-    @include element-image-size(34rem);
-    @include element-psi-absolute(null,null,0,50%);
-    @include element-space(0 0 0 -17rem);
+    @include element-image-size(70%);
+    //min-width: 50rem;
+    @include element-space(0 0 0 0,.4rem);
   }
   #coverImg {
     @include element-psi-absolute(0,null,null,0);
@@ -115,6 +120,10 @@
 
 .default-page-darken {
   background: rgba(darken($color-deep-purple800,26%),.87);
+}
+
+.index-card {
+  background: none;
 }
 
 .ch233-tools {
@@ -185,6 +194,9 @@
   @include element-space(0,0);
   .grid {
     @include element-space(0,0);
+    .grid-row {
+      overflow: hidden;
+    }
   }
   .card-li {
     //padding-top: 0;
@@ -194,8 +206,11 @@
       cursor: pointer;
       margin: 0 auto;
     }
+    img {
+      @include border-radius(.1rem);
+    }
     .card-li-tt {
-      @include element-text(.7,rgba(0,0,0,.87),center);
+      @include element-text(.7,rgba($color-255,.87),center);
       @include element-space(0,.6rem 0 0 0);
     }
   }
@@ -203,7 +218,7 @@
 
 .card-1-tt {
   @include element-horizontally(2.2rem);
-  @include element-text(.8,rgba(0,0,0,.54),center);
+  @include element-text(.8,rgba($color-255,.87),center);
   font-weight: bold;
   i,span {
     @include inline-block();
@@ -219,9 +234,10 @@
     padding-left: 1%;
     @include inline-block();
     @include element-horizontally(2.4rem);
-    background: $color-primary300;
+    background: rgba($color-primary300,.54);
     @include element-link(rgba(255,255,255,.87));
     @include element-space(1rem 0 0 0);
+    @include border-radius(.1rem);
     a {
       @include element-size(100%,100%);
     }
@@ -244,6 +260,8 @@
   }
 }
 
+
+
 .foot-map {
   @include element-space(0,0 0 1rem 0);
   ul {
@@ -263,6 +281,20 @@
   img {
     @include element-size(5rem);
     @include element-space(1rem auto);
+  }
+}
+
+.index-footer {
+  background: none;
+  border: none;
+  ul {
+    @include element-text(.7,rgba($color-255,.54),center);
+    li {
+      @include element-link(rgba($color-255,.54));
+    }
+  }
+  p {
+    color: rgba($color-255,.54);
   }
 }
 

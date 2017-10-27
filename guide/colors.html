@@ -2,7 +2,7 @@
 <html lang="zh-cmn-Hans-CN">
 <head>
     <meta charset="UTF-8">
-    <title>ch233-smile</title>
+    <title>ch233-not.included</title>
     <link rel="shortcut icon" href="../dist/img/favicon.ico">
     <!-- main style sheet *necessary -->
     <link rel="stylesheet" href="../dist/css/ch233.mini.css">
@@ -13,18 +13,8 @@
 <div class="page">
 
     <!-- header 部分，包含导航和 logo -->
-    <div class="header header-ufo header-guide">
-        <div class="header-nav">
-            <!--<div class="nav-logo"><img src="img/logo_650x270_white_shadow.png"></div>-->
-            <ul class="nav-list nav-list-right">
-                <li class="active"><a href="#">首页</a></li>
-                <li><a href="#">快速起步</a></li>
-                <li><a href="#">全局 CSS 样式</a></li>
-                <li><a href="#">JavaScript 脚本</a></li>
+    <div class="header header-ufo header-guide" id="ajaxGuideHeader">
 
-                <li><a href="https://github.com/CloudHand233/ch233-smile---"><img src="../dist/img/github_64x.png">GitHub</a></li>
-            </ul>
-        </div>
     </div>
 
     <!-- container 是主体内容区域 -->
@@ -352,8 +342,8 @@
     </div>
 
     <!-- footer 是底部，链接 or 版权区域 -->
-    <div class="footer">
-        <div class="content-block">footer</div>
+    <div class="footer" id="ajaxGuideFooter">
+
     </div>
 
 </div>
@@ -363,6 +353,21 @@
 <script type="text/javascript" src="../dist/js/ch233.min.js"></script>
 <script type="text/javascript" src="../dist/js/clipboard.min.js"></script>
 <script type="text/javascript">
+    // ajax load
+    $.ajax({
+        url: "_guide_header.html",
+        success: function(result){
+            $("#ajaxGuideHeader").html(result);
+        }
+    });
+    $.ajax({
+        url: "_guide_footer.html",
+        success: function(result){
+            $("#ajaxGuideFooter").html(result);
+        }
+    });
+
+    // clip
     function cliptoboard() {
         var clipboard = new Clipboard('.current', {
             target: function() {

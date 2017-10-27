@@ -10,19 +10,20 @@
 // }
 
 //cover_bg.gif animate
+function coverAnimate2() {
+    $("#coverImg")
+        .stop().animate({
+        left: '0'
+    },2000)
+}
 function coverAnimate() {
     $("#coverImg")
-        .css({"top": "0px","left": "0px"})
         .stop().animate({
-            top: '-687px',
-            left: '-1010px'
-        },20000)
-        .stop().animate({
-            left: '0'
-        },2000)
-        .stop().animate({
-            left: '-1010px'
-        },10000);
+        left: '-20px'
+    },2000)
 }
 coverAnimate();
-setInterval(coverAnimate,35000);
+setInterval(coverAnimate,7000);
+setInterval(coverAnimate2,3000);
+
+

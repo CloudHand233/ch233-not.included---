@@ -433,7 +433,7 @@ sass 中如何使用：
 <html lang="zh-cmn-Hans-CN">
 <head>
     <meta charset="UTF-8">
-    <title>ch233-smile</title>
+    <title>ch233-not.included</title>
     <!-- main style sheet *necessary -->
     <link rel="stylesheet" href="css/ch233.mini.css">
 </head>
