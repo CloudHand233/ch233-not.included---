@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ch233-smile</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <!-- main style sheet *necessary -->
+    <link rel="stylesheet" href="../dist/css/ch233.mini.css">
+    <link rel="stylesheet" href="../dist/css/ch233_guide.css">
+    <link rel="stylesheet" href="../dist/plugins/google-code-prettify/prettify.css">
+    <link rel="stylesheet" href="../dist/plugins/google-code-prettify/skins/sons-of-obsidian.css">
+</head>
+<body onload="PR.prettyPrint()">
+
+<!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 -->
+<div class="page">
+
+    <!-- header 部分，包含导航和 logo -->
+    <div class="header header-guide">
+        <div class="header-nav">
+            <!--<div class="nav-logo"><img src="img/logo_650x270_white_shadow.png"></div>-->
+            <ul class="nav-list nav-list-right">
+                <li class="active"><a href="../dist/index_111.html">Home</a></li>
+                <li><a href="#">Start</a></li>
+                <li><a href="guide_index.html">Documents</a></li>
+                <li><a href="guide_js.html">JavaScript</a></li>
+                <li><a href="https://github.com/CloudHand233/ch233-smile---"><img src="../dist/img/github_64x.png">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- container 是主体内容区域 -->
+    <div class="container wrapper-padded">
+        <div class="card elevation-3">
+            <div class="tt-h4 align-center">Ch233 version 3.0 Documents</div>
+            <!-- documents start -->
+            <div class="doc-wrapper">
+                <!-- left -->
+                <div class="doc-wrapper-l">
+                    <div class="tt-h6">
+                        <i class="material-icons">view_headline</i>
+                        <span>Doc.INDEX</span>
+                    </div>
+                    <ul id="docSideBar">
+                    </ul>
+                </div>
+                <!-- right -->
+                <div class="doc-wrapper-r" id="docWrapper">
+                    <!-- *** -->
+                    <h2 class="tt-h5"><i class="material-icons">code</i> html 页面基本结构</h2>
+                    <div class="doc-block-t">
+                        <p>html 页面中基本结构如下：</p>
+                    </div>
+                    <div class="doc-code-show">
+                        <?prettify lang=html linenums=true?>
+                        <pre class="prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-cmn-Hans-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;ch233-not.included&lt;/title&gt;
+    &lt;!-- main style sheet *necessary --&gt;
+    &lt;link rel="stylesheet" href="css/ch233.mini.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- 基本结构，page 是最外层结构，一个页面上可以有多个 page *必须 --&gt;
+&lt;div class="page"&gt;
+
+    &lt;!-- header 部分，包含导航和 logo --&gt;
+    &lt;div class="header"&gt;
+        &lt;div class="header-nav"&gt;
+            &lt;ul class="nav-list nav-list-right"&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt; &lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- cover 部分，滚动图或静态图 --&gt;
+    &lt;div class="cover"&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- container 是主体内容区域 --&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="content-block"&gt;container&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- footer 是底部，链接 or 版权区域 --&gt;
+    &lt;div class="footer"&gt;
+        &lt;div class="content-block"&gt;footer&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!--Elements UED ch233.js--&gt;
+&lt;script type="text/javascript" src="js/jquery-3.2.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/ch233.min.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                        </pre>
+                    </div>
+                    <!-- *** -->
+                    <h2 class="tt-h5"><i class="material-icons">code</i> Grid 布局</h2>
+                    <div class="doc-block-t">
+                        <p>*Grid 网格布局不兼容 IE8 及以下浏览器。QTMDIE</p>
+                        <p>首先确认父级布局是 `content-block` 还是 `content-fluid`，默认情况下，`content-block` 是块状布局，有固定宽度，栅格系统将在不同视口宽度情况下按照断点对父级进行宽度重设；如果是 `content-fluid`，则表明父级是响应式布局，默认情况下父级拥有100%的宽度，栅格系统将在响应式的情况下跟随视口变化而变化；</p>
+                        <p>请注意，content-block 本身不带断点判断，只有在内部使用了 grid 的时候才带有 @media  断点的判断。如果 content-block 自身还有父级的限制，就请使用 content-fluid 即可；</p>
+                        <p>栅格为 16 格，每个 col* 为16/*</p>
+                        <p>栅格基本结构如下：</p>
+                    </div>
+                    <div class="doc-code-show">
+                        <div class="btn character-3">
+                            <a>copy</a>
+                        </div>
+                        <?prettify lang=html linenums=true?>
+                        <pre class="prettyprint doc-code">
+<div class="grid">
+    <div class="grid-row">
+        <div class="col col-lg-2 col-md-4 col-sm-8">1</div>
+        <div class="col col-lg-2 col-md-4 col-sm-8">1</div>
+        <div class="col col-lg-2 col-md-4">1</div>
+        <div class="col col-lg-2 col-md-4">1</div>
+        <div class="col col-lg-2">1</div>
+        <div class="col col-lg-2">1</div>
+        <div class="col col-lg-2">1</div>
+    </div>
+</div>
+                        </pre>
+                    </div>
+                    <div class="doc-block-t">
+                        <p>其中，col-lg-*、col-md-*、col-sm-*，分别对应断点设置中的极限，用此方法设置可实现在断点判断的情况下布局不同的效果。</p>
+                    </div>
+                    <!-- *** -->
+                    <h2 class="tt-h5"><i class="material-icons">code</i> Buttons 按钮</h2>
+                    <div class="doc-block-t">
+                        <p>按钮的基本结构：</p>
+                    </div>
+                    <div class="doc-code-show">
+                        <div class="btn character-3">
+                            <a>copy</a>
+                        </div>
+                        <?prettify lang=html linenums=true?>
+                        <pre class="prettyprint doc-code">
+<div class="btn character-5">
+    <a href="#">BUTTON</a>
+</div>
+                        </pre>
+                    </div>
+                    <div class="doc-block-t">
+                        <ul>
+                            <li> `btn` 是申明一个按钮，默认 `display:block;` ；</li>
+                            <li>`character-*` 制定按钮宽度，不制定，则按钮为全宽度；</li>
+                            <li>`form-inline` 会改变按钮为 inline-blcok ，可以横排**（依赖 input.scss 组件）**；</li>
+                            <li>按钮色 btn-primary 是主色调（500色度）；</li>
+                            <li>按钮色 btn-secondary 是次色调（500色度）；</li>
+                            <li>按钮色 btn-less 是点缀色调（A700色度）；</li>
+                            <li>添加 `elevation-*` 产生 z 轴阴影；</li>
+                        </ul>
+                        <p>其他按钮色：</p>
+                        <ul>
+                            <li>500度标准色：**btn-颜色名**，如 `btn-red`；</li>
+                            <li>A700度高对比色：**btn-颜色名A700**，如 `btn-redA700`；</li>
+                            <li>100度低饱和色：**btn-red100**，如 `btn-red100`；</li>
+                        </ul>
+                    </div>
+                    <h2 class="tt-h6">成组的按钮</h2>
+                    <div class="doc-block-t">
+                        <p>成组按钮 html 结构</p>
+                    </div>
+                    <div class="doc-code-show">
+                        <div class="btn character-3">
+                            <a>copy</a>
+                        </div>
+                        <?prettify lang=html linenums=true?>
+                        <pre class="prettyprint doc-code">
+<!-- block 的组 -->
+<div class="form-gp">
+    <div class="btn character-5">
+        <a href="#">BUTTON</a>
+    </div>
+    <div class="btn character-5">
+        <a href="#">BUTTON</a>
+    </div>
+</div>
+                        </pre>
+                    </div>
+                    <div class="doc-block-t">
+                        <p>inline-block 按钮组 html 结构</p>
+                    </div>
+                    <div class="doc-code-show">
+                        <div class="btn character-3">
+                            <a>copy</a>
+                        </div>
+                        <?prettify lang=html linenums=true?>
+                        <pre class="prettyprint doc-code">
+<!-- inline-block 的组 -->
+<div class="form-gp-inline">
+    <div class="btn character-5">
+        <a href="#">BUTTON</a>
+    </div>
+    <div class="btn character-5">
+        <a href="#">BUTTON</a>
+    </div>
+    <div class="btn btn-inline btn-primary character-5">
+        <a href="#">BUTTON</a>
+    </div>
+</div>
+                        </pre>
+                    </div>
+                    <div class="doc-block-t">
+                        <ul>
+                            <li>为按钮组添加 `form-gp-inline` 可以让组成为 `inline-block`，与其他 `inline-block` 元素横排**（依赖 input.scss 组件）**；</li>
+                            <li>`form-gp-inlinee` 按钮组上还可添加对齐方式：`align-left` `align-center` `align-right` **（依赖 basic_style.scss theme）**；</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- documents end -->
+        </div>
+    </div>
+
+    <!-- footer 是底部，链接 or 版权区域 -->
+    <div class="footer">
+        <div class="content-block">
+            <div class="foot-map">
+                <ul>
+                    <li class="active"><a href="../dist/index_111.html">Home</a></li>
+                    <li><a href="#">Start</a></li>
+                    <li><a href="guide_index.html">Documents</a></li>
+                    <li><a href="guide_js.html">JavaScript</a></li>
+                    <li><a href="https://github.com/CloudHand233/ch233-smile---">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="foot-logo"><img src="../dist/img/logo_650x270_primary_no_shadow.png"></div>
+            <p class="align-center">Copyright @2017. 斯德哥尔摩^精分喵 All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- read modules btn -->
+    <div id="toolBox">
+        <div class="tool-top elevation-4"><i class="material-icons">vertical_align_top</i></div>
+    </div>
+
+</div>
+
+<!--Elements UED ch233.js-->
+<script type="text/javascript" src="../dist/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../dist/js/ch233.min.js"></script>
+<script type="text/javascript" src="../dist/js/clipboard.min.js"></script>
+<script type="text/javascript" src="../dist/plugins/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    // code format
+    function htmlCodeIn(name) {
+        function htmlEscape(s) {
+            return s
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+        $(name).each(function () {
+            var htmlCode = htmlEscape(
+                $(this).html()
+            );
+            $(this).html(htmlCode);
+        });
+    }
+    htmlCodeIn(".doc-code");
+
+    // copy code
+    function cliptoboard() {
+        var clipboard = new Clipboard('.current', {
+            target: function() {
+                return document.querySelector('#currentCode');
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+    }
+
+    $(".doc-code-show").find(".btn").off("mousedown").on("mousedown",function () {
+        if ($(this).hasClass("current") === false) {
+            $(".doc-code-show").find(".btn").removeClass("current");
+            $(".doc-code-show").find(".doc-code").attr("id","");
+            $(".copy-alert").remove();
+            $(this).addClass("current");
+            $(this).siblings(".doc-code").attr("id","currentCode");
+            cliptoboard();
+            $(this).after("<span class='copy-alert'>copy successful!</span>");
+            $(".copy-alert").stop().fadeIn();
+            setTimeout("$(\".copy-alert\").stop().fadeOut()",1000);
+        } else {
+            cliptoboard();
+            $(this).after("<span class='copy-alert'>copy successful!</span>");
+            $(".copy-alert").stop().fadeIn();
+            setTimeout("$(\".copy-alert\").stop().fadeOut()",1000);
+        }
+    });
+
+    //SideBar Set Options
+    function SideBarSet() {
+        var c = 0;
+        var docWrapper = $("#docWrapper");
+        var sideBar = $("#docSideBar");
+
+        for (var i=0; i<$(".tt-h5").length; i++) {
+            sideBar.append("<li><a id='doc-tt-"+i+"'></a></li>");
+        }
+
+        docWrapper.find(".tt-h5").each(function () {
+            $(this).attr("name","doc-tt-"+c);
+            c++;
+        });
+
+        sideBar.find("li").find("a").each(function () {
+            var Tid = $(this).attr("id");
+            var doc = $(".tt-h5[name='"+Tid+"']");
+            var tT = doc.html();
+            var tS = doc.offset().top;
+            $(this).html(tT);
+            $(this).on("click",function () {
+                $("html,body").stop().animate({scrollTop:tS},1000);
+//            console.log("run");
+            })
+        });
+    }
+    SideBarSet();
+
+    // when scroll, side bar will fixed
+    $(document).scroll(function () {
+        var w = $("#docWrapper");
+        var docL = $(".doc-wrapper-l");
+        var docR = $(".doc-wrapper-r");
+
+        var sW = $(window).scrollTop();
+        var sT = w.offset().top;
+        var hT = w.height();
+        var winT = $(window).height();
+        var hB = docL.height();
+        console.log(hB,winT,hT-sW);
+
+        if (hT-sW < hB) {
+            docL.fadeOut();
+        } else {
+            docL.fadeIn();
+        }
+        if (sW >= sT) {
+            docL.css({
+                "position":"fixed",
+                "top":"0",
+                "right":"0",
+                "left":"2.5rem",
+                "over-flow":"auto"
+            });
+            docR.css({
+                "margin-left":"260px"
+            });
+        } else {
+            docL.css({
+                "position":"relative",
+                "top":"0",
+                "right":"0",
+                "left":"0",
+                "over-flow":"auto"
+            });
+            docR.css({
+                "margin-left":""
+            });
+        }
+//        console.log(sW);
+//        console.log(sT);
+    });
+
+    // tool modules btn even
+    function toolBox() {
+        var box = $("#toolBox");
+        var t1 = box.find(".tool-top");
+
+        var bodyH = $("body").height();
+        var winH = $(window).height();
+
+        if (bodyH > winH) {
+            t1.fadeIn();
+            t1.on("click",function () {
+                $("html,body").stop().animate({scrollTop:0},1000);
+                console.log("111");
+            });
+        }
+
+    }
+    toolBox();
+
+
+
+    
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

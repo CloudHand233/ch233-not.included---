@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
   * Author: 云手
-  * GitHub: https://github.com/CloudHand233/ch233-smile---
+  * GitHub: https://github.com/CloudHand233/ch233-not.included---
   * LastUpdate: 2017.Aug.25th
   * Version: 3.0.0
 */
@@ -90,6 +90,17 @@
   }
 }
 
+@mixin element-link-2color($color-1:#000,$color-2:#000,$color-1-alpha:.54,$color-2-alpha:.87,$hover-decoration:none,$link-decoration:none) {
+  a,a:link,a:visited {
+    color: rgba($color-1,$color-1-alpha);
+    text-decoration: $link-decoration;
+  }
+  a:hover {
+    color: rgba($color-2,$color-2-alpha);
+    text-decoration: $hover-decoration;
+  }
+}
+
 /* css3 & hack style
    ========================================================================== */
 @mixin inline-block() {
@@ -130,6 +141,6 @@
    ========================================================================== */
 @for $i from 1 to 101 {
   .character-#{$i} {
-    @include element-size(1em*$i!important);
+    width: 1em*$i!important;
   }
 }

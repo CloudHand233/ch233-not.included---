@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/*!
+  * Author: 云手
+  * GitHub: https://github.com/CloudHand233/ch233-not.included---
+  * LastUpdate: 2017.Aug.25th
+  * Version: 3.0.0
+*/
+
+/* import
+   ========================================================================== */
+@import "../core/mixins";
+@import "../core/colors";
+@import "../core/breakpoints";
+@import "../components/extend";
+
+/* guide styles
+   ========================================================================== */
+.doc-wrapper {
+  @include element-size(100%);
+  @include element-space(2rem 0 1rem 0);
+  vertical-align: top;
+  z-index: 998;
+  .doc-wrapper-l {
+    @include element-size(12rem);
+    background: rgba($color-primary500,.1);
+    @include inline-block();
+    vertical-align: top;
+    z-index: 999;
+  }
+  .doc-wrapper-r {
+    background: $color-255;
+    width: calc(100% - 15rem);
+    @include inline-block();
+    vertical-align: top;
+    @include element-space(0 0 0 .8rem, 0 0 0 .8rem);
+    @include element-border(null,null,null,null,.05rem solid rgba($color-000,.1));
+    overflow: auto;
+    z-index: 999;
+  }
+}
+
+.doc-wrapper-l {
+  .tt-h6 {
+    @include element-horizontally(1.8rem);
+    @include element-space(null,0 0 0 1rem);
+    color: rgba($color-primary500,.54);
+    i, span {
+      @include inline-block();
+      vertical-align: middle;
+    }
+  }
+  ul {
+    @include element-size();
+    @include element-space(.5rem 1rem,.6rem);
+    @include element-border(null,.05rem solid rgba($color-primary500,.26));
+    li {
+      @include element-horizontally(1.6rem);
+      cursor: pointer;
+      @include element-link-2color($color-000,$color-primary500);
+      @extend %a-tag-fluid;
+    }
+  }
+}
+
+.doc-wrapper-r {
+  .tt-h5:first-of-type {
+    padding-top: 0;
+  }
+  .tt-h5 {
+    color: rgba($color-000,.54);
+    @include element-border(null,null,null,.05rem solid rgba($color-000,.1));
+    @include element-space(0 0 1rem 0,1.6rem 0 .6rem 0);
+    i {
+      background: rgba($color-primary300,.26);
+      color: rgba($color-255,.87);
+      @include border-radius(.2rem);
+    }
+  }
+  .tt-h6 {
+    @include element-space(0 0 1rem 0,1.6rem 0 .6rem 0);
+  }
+  .doc-block-t {
+    @include element-space(.6rem 0);
+    p {
+      @include element-text(.7,rgba($color-000,.87));
+      @include element-space(.4rem 0);
+    }
+    ul {
+      @include element-space(.4rem 0);
+      li {
+        @include element-space(.6rem 0);
+        padding-left: .7rem;
+        position: relative;
+      }
+      li:after {
+        content: '';
+        width: .3rem;
+        height: .3rem;
+        background: rgba($color-000,.26);
+        @include element-psi-absolute(.2rem,null,null,0);
+        @include border-radius(100%);
+      }
+    }
+  }
+  .doc-code-show {
+    width: calc(100% - 3rem);
+    position: relative;
+    @include element-space(0 0 1rem 0,0 0 0 3rem);
+    background: rgba($color-primary300,.1);
+    @include element-border(.3rem solid rgba($color-primary300,.26),null,.5rem solid rgba($color-primary300,.26));
+    @include border-radius(.2rem);
+    overflow: hidden;
+    ul,ol,li {
+      list-style-type: decimal!important;
+    }
+    pre {
+      width: 100%;
+      margin: 0!important;
+    }
+    .btn {
+      @include element-psi-absolute(null,0,0);
+      background: rgba($color-amber,.87);
+      padding: .2rem;
+    }
+    span.copy-alert {
+      display: block;
+      @include element-psi-absolute(0,0,null,0);
+      background: rgba($color-amber,.54);
+      @include element-horizontally(2rem);
+      text-align: center;
+      font-size: .7rem;
+      font-style: italic;
+      color: rgba($color-255,.87);
+      display: none;
+    }
+  }
+}
+
+#toolBox {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9990;
+  div {
+    @include element-size(2rem);
+    @include element-space(1rem 0);
+    background: rgba($color-primary300,.87);
+    cursor: pointer;
+    @include border-radius(100%);
+    display: none;
+    i {
+      @include element-size(100%);
+      @include element-horizontally(2rem);
+      text-align: center;
+      font-size: .9rem;
+      color: rgba($color-255,.87);
+    }
+  }
+}

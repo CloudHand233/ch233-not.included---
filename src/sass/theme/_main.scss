@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
   * Author: 云手
-  * GitHub: https://github.com/CloudHand233/ch233-smile---
+  * GitHub: https://github.com/CloudHand233/ch233-not.included---
   * LastUpdate: 2017.Aug.25th
   * Version: 3.0.0
 */
@@ -76,12 +76,13 @@
 }
 
 .cover {
-  @include element-size(auto,28rem);
+  @include element-size(auto,24rem);
   @include element-space(0 auto);
   @include gradient-directional($color-primary300,$color-indigo700,30deg);
+  @include element-border(null,null,null,.8rem solid $color-amber300);
   .cover-img {
     @include element-psi-absolute(0,0,0,0);
-    @include element-horizontally(28rem,center);
+    @include element-horizontally(24rem,center);
     overflow: hidden;
   }
   .cover-logo {
@@ -90,9 +91,9 @@
     @include element-space(-4rem 0 0 0);
   }
   .cover-theme {
-    @include element-image-size(38rem);
+    @include element-image-size(34rem);
     @include element-psi-absolute(null,null,0,50%);
-    @include element-space(0 0 0 -19rem);
+    @include element-space(0 0 0 -17rem);
   }
   #coverImg {
     @include element-psi-absolute(0,null,null,0);
@@ -112,6 +113,10 @@
   }
 }
 
+.default-page-darken {
+  background: rgba(darken($color-deep-purple800,26%),.87);
+}
+
 .ch233-tools {
   @include element-size();
   @include element-space(0 4rem 1rem);
@@ -126,18 +131,52 @@
       @include element-space(0 auto);
     }
   }
+  // media breakpoints md >768 <991
+  @include media-respond(md) {
+    @include element-size();
+    @include element-space(0 4rem 1rem);
+    text-align: center;
+    display: block;
+    li {
+      @include element-size(48%);
+      @include inline-block();
+      @include element-space(0 0 1.6rem 0);
+      text-align: center;
+      img {
+        @include element-size(50%);
+        @include element-space(0 auto);
+      }
+    }
+  }
+  // media breakpoints md <767
+  @include media-respond(sm) {
+    @include element-size();
+    @include element-space(0 4rem 1rem);
+    text-align: center;
+    display: block;
+    li {
+      @include element-size(48%);
+      @include inline-block();
+      @include element-space(0 0 1.6rem 0);
+      text-align: center;
+      img {
+        @include element-size(50%);
+        @include element-space(0 auto);
+      }
+    }
+  }
 }
 
 .ch233-tools-t {
   text-align: center;
   @include element-space(0 0 3rem 0);
   > p {
-    @include element-text(1.6,rgba($color-indigo500,.54),center);
+    @include element-text(1.6,rgba($color-indigo200,.54),center);
     font-weight: bold;
     @include element-space(.6rem 0);
   }
   > p + p {
-    @include element-text(.8,rgba($color-000,.54),center);
+    @include element-text(.8,rgba($color-255,.54),center);
     font-weight: normal;
   }
 }

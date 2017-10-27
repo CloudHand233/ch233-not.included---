@@ -4,7 +4,7 @@
   "description": "うつせみ ch233-smile",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --output-style nested --source-map true -o dist/css src/sass/output",
+    "scss": "node-sass --output-style compressed --source-map true -o dist/css src/sass/output",
     "uglify": "uglifyjs src/js/* -m -c -o dist/js/ch233.min.js",
     "build:all": "npm run scss && npm run uglify",
     "watch:scss": "onchange \"src/sass/*/*.scss\" -- npm run scss",
@@ -13,7 +13,7 @@
     "ch233": "parallelshell \"npm run watch:scss\" \"npm run watch:js\" \"npm run serve\"",
     "release-zip": "cd dist/ && zip -r9 ch233-$npm_package_version-dist.zip * && mv *.zip ../releases-zip",
 
-    "scss:touch": "node-sass --output-style nested --source-map true -o dist_touch/css src/sass/touch_output",
+    "scss:touch": "node-sass --output-style compressed --source-map true -o dist_touch/css src/sass/touch_output",
     "uglify:touch": "uglifyjs src/js_touch/* -m -c -o dist_touch/js/ch233_touch.min.js",
     "build:all:touch": "npm run scss:touch && npm run uglify:touch",
     "watch:scss:touch": "onchange \"src/sass/*/*.scss\" -- npm run scss:touch",

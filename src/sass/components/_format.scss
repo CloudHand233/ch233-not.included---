@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
   * Author: 云手
-  * GitHub: https://github.com/CloudHand233/ch233-smile---
+  * GitHub: https://github.com/CloudHand233/ch233-not.included---
   * LastUpdate: 2017.Aug.25th
   * Version: 3.0.0
 */
@@ -25,10 +25,11 @@ html {
   font-family: $base-font-cn; /* 1 */
   font-size: $base-font-size;
   line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
-  -webkit-transform:scale(1);
   text-rendering: optimizeLegibility;
+  //Mobile 设计时开启，开启后  position:fixed 无效
+  //-ms-text-size-adjust: 100%; /* 3 */
+  //-webkit-text-size-adjust: 100%; /* 3 */
+  //-webkit-transform:scale(1);
 }
 
 h1,h2,h3,h4,h5,h6 {
