@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "ch233_guide.css",
+	"file": "ch233-guide.css",
 	"sources": [
-		"../../src/sass/output/ch233_guide.scss",
+		"../../src/sass/output/ch233-guide.scss",
 		"../../src/sass/theme/_guide_doc.scss",
 		"../../src/sass/core/_mixins.scss",
 		"../../src/sass/core/_colors.scss",
